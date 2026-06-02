@@ -1,0 +1,109 @@
+[03ene.2025 - 21:39:49]
+// ILCursor: Terraria.Chest::ServerPlaceItem
+
+// Arguments:
+     [0] System.Int32 plr
+     [1] System.Int32 slot
+
+// Locals:
+     [0] System.Int32 V_0
+
+// Body:
+IL_00000: ldarg.1      
+IL_00001: ldsfld       System.Int32 Terraria.ID.PlayerItemSlotID::Bank4_0
+IL_00006: blt.s        IL_00086
+IL_00008: ldarg.1      
+IL_00009: ldsfld       System.Int32 Terraria.ID.PlayerItemSlotID::Bank4_0
+IL_0000E: ldc.i4.s     40
+IL_00010: add          
+IL_00011: bge.s        IL_00086
+IL_00013: ldarg.1      
+IL_00014: ldsfld       System.Int32 Terraria.ID.PlayerItemSlotID::Bank4_0
+IL_00019: sub          
+IL_0001A: stloc.0      
+IL_0001B: ldsfld       Terraria.Player[] Terraria.Main::player
+IL_00020: ldarg.0      
+IL_00021: ldelem.ref   
+IL_00022: ldfld        Terraria.Chest Terraria.Player::bank4
+IL_00027: ldfld        Terraria.Item[] Terraria.Chest::item
+IL_0002C: ldloc.0      
+IL_0002D: ldsfld       Terraria.Player[] Terraria.Main::player
+IL_00032: ldarg.0      
+IL_00033: ldelem.ref   
+IL_00034: ldfld        Terraria.Chest Terraria.Player::bank4
+IL_00039: ldfld        Terraria.Item[] Terraria.Chest::item
+IL_0003E: ldloc.0      
+IL_0003F: ldelem.ref   
+IL_00040: ldsfld       Terraria.Player[] Terraria.Main::player
+IL_00045: ldarg.0      
+IL_00046: ldelem.ref   
+IL_00047: callvirt     Microsoft.Xna.Framework.Vector2 Terraria.Entity::get_Center()
+IL_0004C: call         Terraria.Item Terraria.Chest::PutItemInNearbyChest(Terraria.Item,Microsoft.Xna.Framework.Vector2)
+IL_00051: ldarg.0      
+IL_00052: call         Terraria.Item MagicStorage.Edits.QuickStackILEdit::CheckStorageQuickStacking(Terraria.Item,System.Byte)
+IL_00057: stelem.ref   
+IL_00058: ldc.i4.5     
+IL_00059: ldc.i4.m1    
+IL_0005A: ldc.i4.m1    
+IL_0005B: ldnull       
+IL_0005C: ldarg.0      
+IL_0005D: ldarg.1      
+IL_0005E: conv.r4      
+IL_0005F: ldsfld       Terraria.Player[] Terraria.Main::player
+IL_00064: ldarg.0      
+IL_00065: ldelem.ref   
+IL_00066: ldfld        Terraria.Chest Terraria.Player::bank4
+IL_0006B: ldfld        Terraria.Item[] Terraria.Chest::item
+IL_00070: ldloc.0      
+IL_00071: ldelem.ref   
+IL_00072: ldfld        System.Int32 Terraria.Item::prefix
+IL_00077: conv.r4      
+IL_00078: ldc.r4       0
+IL_0007D: ldc.i4.0     
+IL_0007E: ldc.i4.0     
+IL_0007F: ldc.i4.0     
+IL_00080: call         System.Void Terraria.NetMessage::SendData(System.Int32,System.Int32,System.Int32,Terraria.Localization.NetworkText,System.Int32,System.Single,System.Single,System.Single,System.Int32,System.Int32,System.Int32)
+IL_00085: ret          
+IL_00086: ldarg.1      
+IL_00087: ldc.i4.s     58
+IL_00089: bge.s        IL_000E6
+IL_0008B: ldsfld       Terraria.Player[] Terraria.Main::player
+IL_00090: ldarg.0      
+IL_00091: ldelem.ref   
+IL_00092: ldfld        Terraria.Item[] Terraria.Player::inventory
+IL_00097: ldarg.1      
+IL_00098: ldsfld       Terraria.Player[] Terraria.Main::player
+IL_0009D: ldarg.0      
+IL_0009E: ldelem.ref   
+IL_0009F: ldfld        Terraria.Item[] Terraria.Player::inventory
+IL_000A4: ldarg.1      
+IL_000A5: ldelem.ref   
+IL_000A6: ldsfld       Terraria.Player[] Terraria.Main::player
+IL_000AB: ldarg.0      
+IL_000AC: ldelem.ref   
+IL_000AD: callvirt     Microsoft.Xna.Framework.Vector2 Terraria.Entity::get_Center()
+IL_000B2: call         Terraria.Item Terraria.Chest::PutItemInNearbyChest(Terraria.Item,Microsoft.Xna.Framework.Vector2)
+IL_000B7: ldarg.0      
+IL_000B8: call         Terraria.Item MagicStorage.Edits.QuickStackILEdit::CheckStorageQuickStacking(Terraria.Item,System.Byte)
+IL_000BD: stelem.ref   
+IL_000BE: ldc.i4.5     
+IL_000BF: ldc.i4.m1    
+IL_000C0: ldc.i4.m1    
+IL_000C1: ldnull       
+IL_000C2: ldarg.0      
+IL_000C3: ldarg.1      
+IL_000C4: conv.r4      
+IL_000C5: ldsfld       Terraria.Player[] Terraria.Main::player
+IL_000CA: ldarg.0      
+IL_000CB: ldelem.ref   
+IL_000CC: ldfld        Terraria.Item[] Terraria.Player::inventory
+IL_000D1: ldarg.1      
+IL_000D2: ldelem.ref   
+IL_000D3: ldfld        System.Int32 Terraria.Item::prefix
+IL_000D8: conv.r4      
+IL_000D9: ldc.r4       0
+IL_000DE: ldc.i4.0     
+IL_000DF: ldc.i4.0     
+IL_000E0: ldc.i4.0     
+IL_000E1: call         System.Void Terraria.NetMessage::SendData(System.Int32,System.Int32,System.Int32,Terraria.Localization.NetworkText,System.Int32,System.Single,System.Single,System.Single,System.Int32,System.Int32,System.Int32)
+IL_000E6: ret          

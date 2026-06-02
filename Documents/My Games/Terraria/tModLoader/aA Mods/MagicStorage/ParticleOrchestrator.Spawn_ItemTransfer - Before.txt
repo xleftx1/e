@@ -1,0 +1,79 @@
+[03ene.2025 - 21:39:49]
+// ILCursor: Terraria.GameContent.Drawing.ParticleOrchestrator::Spawn_ItemTransfer
+
+// Arguments:
+     [0] Terraria.GameContent.Drawing.ParticleOrchestraSettings settings
+
+// Locals:
+     [0] Microsoft.Xna.Framework.Vector2 V_0
+     [1] Microsoft.Xna.Framework.Vector2 V_1
+     [2] Microsoft.Xna.Framework.Vector2 V_2
+     [3] System.Int32 V_3
+     [4] Terraria.Item V_4
+     [5] System.Int32 V_5
+     [6] Terraria.Graphics.Renderers.ItemTransferParticle V_6
+
+// Body:
+IL_00000: ldarg.0      
+IL_00001: ldfld        Microsoft.Xna.Framework.Vector2 Terraria.GameContent.Drawing.ParticleOrchestraSettings::PositionInWorld
+IL_00006: ldarg.0      
+IL_00007: ldfld        Microsoft.Xna.Framework.Vector2 Terraria.GameContent.Drawing.ParticleOrchestraSettings::MovementVector
+IL_0000C: call         Microsoft.Xna.Framework.Vector2 Microsoft.Xna.Framework.Vector2::op_Addition(Microsoft.Xna.Framework.Vector2,Microsoft.Xna.Framework.Vector2)
+IL_00011: call         Terraria.Utilities.UnifiedRandom Terraria.Main::get_rand()
+IL_00016: ldc.r4       32
+IL_0001B: ldc.r4       32
+IL_00020: call         Microsoft.Xna.Framework.Vector2 Terraria.Utils::NextVector2Circular(Terraria.Utilities.UnifiedRandom,System.Single,System.Single)
+IL_00025: stloc.0      
+IL_00026: ldarg.0      
+IL_00027: ldfld        Microsoft.Xna.Framework.Vector2 Terraria.GameContent.Drawing.ParticleOrchestraSettings::PositionInWorld
+IL_0002C: ldloc.0      
+IL_0002D: call         Microsoft.Xna.Framework.Vector2 Microsoft.Xna.Framework.Vector2::op_Addition(Microsoft.Xna.Framework.Vector2,Microsoft.Xna.Framework.Vector2)
+IL_00032: stloc.1      
+IL_00033: ldloc.1      
+IL_00034: call         Microsoft.Xna.Framework.Vector2 Microsoft.Xna.Framework.Vector2::op_Subtraction(Microsoft.Xna.Framework.Vector2,Microsoft.Xna.Framework.Vector2)
+IL_00039: stloc.2      
+IL_0003A: ldarg.0      
+IL_0003B: ldfld        System.Int32 Terraria.GameContent.Drawing.ParticleOrchestraSettings::UniqueInfoPiece
+IL_00040: stloc.3      
+IL_00041: ldsfld       System.Collections.Generic.Dictionary`2<System.Int32,Terraria.Item> Terraria.ID.ContentSamples::ItemsByType
+IL_00046: ldloc.3      
+IL_00047: ldloca.s     V_4
+IL_00049: callvirt     System.Boolean System.Collections.Generic.Dictionary`2<System.Int32,Terraria.Item>::TryGetValue(TKey,TValue&)
+IL_0004E: brfalse.s    IL_000C0
+IL_00050: ldloc.s      V_4
+IL_00052: callvirt     System.Boolean Terraria.Item::get_IsAir()
+IL_00057: brtrue.s     IL_000C0
+IL_00059: ldloc.s      V_4
+IL_0005B: ldfld        System.Int32 Terraria.Item::type
+IL_00060: stloc.3      
+IL_00061: call         Terraria.Utilities.UnifiedRandom Terraria.Main::get_rand()
+IL_00066: ldc.i4.s     60
+IL_00068: ldc.i4.s     80
+IL_0006A: callvirt     System.Int32 Terraria.Utilities.UnifiedRandom::Next(System.Int32,System.Int32)
+IL_0006F: stloc.s      V_5
+IL_00071: ldloc.1      
+IL_00072: ldloc.2      
+IL_00073: call         Microsoft.Xna.Framework.Vector2 Microsoft.Xna.Framework.Vector2::op_Addition(Microsoft.Xna.Framework.Vector2,Microsoft.Xna.Framework.Vector2)
+IL_00078: ldc.r4       -8
+IL_0007D: ldc.r4       -8
+IL_00082: newobj       System.Void Microsoft.Xna.Framework.Vector2::.ctor(System.Single,System.Single)
+IL_00087: call         Microsoft.Xna.Framework.Vector2 Microsoft.Xna.Framework.Vector2::op_Addition(Microsoft.Xna.Framework.Vector2,Microsoft.Xna.Framework.Vector2)
+IL_0008C: ldloc.s      V_5
+IL_0008E: ldc.i4.s     10
+IL_00090: add          
+IL_00091: call         System.Void Terraria.Chest::AskForChestToEatItem(Microsoft.Xna.Framework.Vector2,System.Int32)
+IL_00096: ldsfld       Terraria.Graphics.Renderers.ParticlePool`1<Terraria.Graphics.Renderers.ItemTransferParticle> Terraria.GameContent.Drawing.ParticleOrchestrator::_poolItemTransfer
+IL_0009B: callvirt     T Terraria.Graphics.Renderers.ParticlePool`1<Terraria.Graphics.Renderers.ItemTransferParticle>::RequestParticle()
+IL_000A0: stloc.s      V_6
+IL_000A2: ldloc.s      V_6
+IL_000A4: ldloc.3      
+IL_000A5: ldloc.s      V_5
+IL_000A7: ldloc.1      
+IL_000A8: ldloc.1      
+IL_000A9: ldloc.2      
+IL_000AA: call         Microsoft.Xna.Framework.Vector2 Microsoft.Xna.Framework.Vector2::op_Addition(Microsoft.Xna.Framework.Vector2,Microsoft.Xna.Framework.Vector2)
+IL_000AF: callvirt     System.Void Terraria.Graphics.Renderers.ItemTransferParticle::Prepare(System.Int32,System.Int32,Microsoft.Xna.Framework.Vector2,Microsoft.Xna.Framework.Vector2)
+IL_000B4: ldsfld       Terraria.Graphics.Renderers.ParticleRenderer Terraria.Main::ParticleSystem_World_OverPlayers
+IL_000B9: ldloc.s      V_6
+IL_000BB: callvirt     System.Void Terraria.Graphics.Renderers.ParticleRenderer::Add(Terraria.Graphics.Renderers.IParticle)
+IL_000C0: ret          

@@ -1,0 +1,522 @@
+[0002.42] Log: Async Log file open, 07/08/23 17:48:45
+[0002.55] Init: WinSock: version 1.1 (2.2), MaxSocks=32767, MaxUdp=65467
+[0002.55] Log:  ... running in INSTALLED mode
+[0002.55] DevConfig: GConfig::Find has loaded file:  ..\..\Engine\Config\ConsoleVariables.ini
+[0002.55] Init: Version: 10897
+[0002.55] Init: Epic Internal: 0
+[0002.55] Init: Compiled (64-bit): Jun 15 2023 01:44:13
+[0002.55] Init: Changelist: 1532151
+[0002.55] Init: Command line: -pid=402 -steam -anon  -seekfreeloadingPCConsole -eac_dir "..\\EasyAntiCheat\\"
+[0002.55] Init: Base directory: C:\Program Files (x86)\Steam\steamapps\common\Paladins\Binaries\Win64\
+[0002.57] Init: Computer: DESKTOP-4G6HKAG
+[0002.57] Init: User: PC
+[0002.57] Init: CPU Page size=4096, Processors=8, Cores=4
+[0002.57] Init: High frequency timer resolution =10.000000 MHz
+[0002.57] Init: Memory total: Physical=13.9GB (14GB approx) Pagefile=18.9GB Virtual=131072.0GB
+[0003.48] DevOnline: Initializing MCTS
+[0004.64] VoiceChat: Info  VivoxApi::CommandHandler::ProcessRequest(645) - this=0x1a657351fe0,ToXml(request, true)=<Request requestId="" action="Aux.GetCaptureDevices.1" />
+[0004.64] VoiceChat: Info  VivoxApi::CommandHandler::PassCommand(812) - this=0x1a657351fe0,ToXml(&command->GetResp().base, true)=<Response requestId="" action="Aux.GetCaptureDevices.1"><ReturnCode>0</ReturnCode><Results><StatusCode>0</StatusCode><StatusString /><CaptureDevices><CaptureDevice><Device>{0.0.1.00000000}.{a2e45ff1-9f8d-40b8-a99d-d28d1a613234}</Device><DisplayName>MicrÒ³fono (Realtek(R) Audio)</DisplayName><Type>SpecificDevice</Type></CaptureDevice><CaptureDevice><Device>Default System Device</Device><DisplayName>Default System Device</DisplayName><Type>DefaultSystemDevice</Type></CaptureDevice><CaptureDevice><Device>Default Communication Device</Device><DisplayName>Default Communication Device</DisplayName><Type>DefaultCommunicationDevice</Type></CaptureDevice><CaptureDevice><Device>No Device</Device><DisplayName>No Device</DisplayName><Type>NullDevice</Type></CaptureDevice></CaptureDevices><CurrentCaptureDevice><Device>Default System Device</Device><DisplayName>Default System Device</DisplayName><Type>DefaultSystemDevice</Type></CurrentCaptureDevice><EffectiveCaptureDevice><Device>{0.0.1.00000000}.{a2e45ff1-9f8d-40b8-a99d-d28d1a613234}</Device><DisplayName>MicrÒ³fono (Realtek(R) Audio)</DisplayName><Type>SpecificDevice</Type></EffectiveCaptureDevice><DefaultCaptureDevice><Device>{0.0.1.00000000}.{a2e45ff1-9f8d-40b8-a99d-d28d1a613234}</Device><DisplayName>MicrÒ³fono (Realtek(R) Audio)</DisplayName><Type>SpecificDevice</Type></DefaultCaptureDevice><DefaultCommunicationCaptureDevice><Device>{0.0.1.00000000}.{a2e45ff1-9f8d-40b8-a99d-d28d1a613234}</Device><DisplayName>MicrÒ³fono (Realtek(R) Audio)</DisplayName><Type>SpecificDevice</Type></DefaultCommunicationCaptureDevice></Results><InputXml><Request requestId="" action="Aux.GetCaptureDevices.1" /></InputXml></Response>
+[0004.64] VoiceChat: Info  VivoxApi::CommandHandler::ProcessRequest(645) - this=0x1a657351fe0,ToXml(request, true)=<Request requestId="" action="Aux.GetRenderDevices.1" />
+[0004.64] VoiceChat: Info  VivoxApi::CommandHandler::PassCommand(812) - this=0x1a657351fe0,ToXml(&command->GetResp().base, true)=<Response requestId="" action="Aux.GetRenderDevices.1"><ReturnCode>0</ReturnCode><Results><StatusCode>0</StatusCode><StatusString /><RenderDevices><RenderDevice><Device>{0.0.0.00000000}.{1442b5b1-de3a-419b-938d-0d01d30d0b58}</Device><DisplayName>Realtek Digital Output (Realtek(R) Audio)</DisplayName><Type>SpecificDevice</Type></RenderDevice><RenderDevice><Device>{0.0.0.00000000}.{5ae0d842-5384-49d4-821a-cb264915d7d1}</Device><DisplayName>Altavoces (Realtek(R) Audio)</DisplayName><Type>SpecificDevice</Type></RenderDevice><RenderDevice><Device>Default System Device</Device><DisplayName>Default System Device</DisplayName><Type>DefaultSystemDevice</Type></RenderDevice><RenderDevice><Device>Default Communication Device</Device><DisplayName>Default Communication Device</DisplayName><Type>DefaultCommunicationDevice</Type></RenderDevice><RenderDevice><Device>No Device</Device><DisplayName>No Device</DisplayName><Type>NullDevice</Type></RenderDevice></RenderDevices><CurrentRenderDevice><Device>Default System Device</Device><DisplayName>Default System Device</DisplayName><Type>DefaultSystemDevice</Type></CurrentRenderDevice><EffectiveRenderDevice><Device>{0.0.0.00000000}.{5ae0d842-5384-49d4-821a-cb264915d7d1}</Device><DisplayName>Altavoces (Realtek(R) Audio)</DisplayName><Type>SpecificDevice</Type></EffectiveRenderDevice><DefaultRenderDevice><Device>{0.0.0.00000000}.{5ae0d842-5384-49d4-821a-cb264915d7d1}</Device><DisplayName>Altavoces (Realtek(R) Audio)</DisplayName><Type>SpecificDevice</Type></DefaultRenderDevice><DefaultCommunicationRenderDevice><Device>{0.0.0.00000000}.{5ae0d842-5384-49d4-821a-cb264915d7d1}</Device><DisplayName>Altavoces (Realtek(R) Audio)</DisplayName><Type>SpecificDevice</Type></DefaultCommunicationRenderDevice></Results><InputXml><Request requestId="" action="Aux.GetRenderDevices.1" /></InputXml></Response>
+[0004.64] VoiceChat: Vivox Version: 4.9.0002.31672
+[0004.64] Init: Game is version 6.4.5302.0.
+[0008.03] Log: Initializing Steamworks
+[0008.12] Log: Steam Client API initialized 1
+[0008.12] Log: [OnlineSubsystemSteamworks.OnlineSubsystemSteamworks].GameVersion is not set. Server advertising will fail
+[0008.12] Log: Steam Game Server API initialized 0
+[0008.12] Log: Epic Online Services API Disabled!
+[0008.12] Init: Presizing for 110000 objects not considered by GC, pre-allocating 0 bytes.
+[0008.12] Init: Object subsystem initialized
+[0008.12] Log: Got Steam Language: latam which is LangExt ESL
+[0008.53] Log: CachePaths() took 0.38 Seconds
+[0008.53] Log: TgAIBehaviorTreeManager :: Loading behavior trees
+[0008.77] Log: TgAIBehaviorTreeManager :: Successfully loaded behavior trees
+[0011.70] Log: Landing Panel http://cds.q6u4m8x5.hwcdn.net/LandingPanel/Paladins/live/
+[0011.73] Log: SystemSettings based on: SystemSettings
+[0011.73] Log: SystemSettings based on: SystemSettings
+[0011.73] Log: SystemSettings based on: SystemSettings
+[0011.74] Log: SystemSettings based on: SystemSettings
+[0011.74] Log: SystemSettings based on: SystemSettings
+[0011.74] Log: SystemSettings based on: SystemSettings
+[0011.74] Log: SystemSettings based on: SystemSettings
+[0011.74] Log: SystemSettings based on: SystemSettings
+[0011.74] Log: SystemSettings based on: SystemSettings
+[0011.74] Log: SystemSettings based on: SystemSettings
+[0020.38] Log: Found D3D11 adapter 0: AMD Radeon(TM) Vega 11 Graphics
+[0020.38] Log: Adapter has 2032MB of dedicated video memory, 0MB of dedicated system memory, and 7142MB of shared system memory
+[0020.40] Log: Shader platform (RHI): PC-D3D-SM5
+[0020.57] Log: PhysX GPU Support: DISABLED
+[0020.79] Log: RENDERTHREADDEBUG - Calling Start Rendering Thread
+[0020.86] Log: FEACClient being initialized
+[0020.86] Log: [RallyHereEvent] Creating event client
+[0020.86] Log: [RallyHereEvent] FRH_EventClient created.
+[0020.86] Log: [RallyHereEvent] FRH_EventClient:: Event sending enabled: true
+[0020.86] Log: [RallyHereEvent] Found version "6.4.5302.0 CLIENT".
+[0021.48] Log: [RallyHereEvent] FRH_EventClient:: Game=400 posting to URL https://collect.analytics.unity3d.com/collect/api/project/5796e3e8-ac45-4543-9f7d-061279eb9915/production.
+[0021.48] Log: [RallyHereEvent] Configuring client.
+[0021.50] Log: [RallyHereEvent] FRH_EventClient::Init called
+[0021.50] Log: [RallyHereEvent] FRH_EventClient::Thread created.
+[0024.66] Log: Assembly load started
+[0034.69] Log: Assembly Loaded Version: DBExport: 06/15/2023  0:23:27,  Src=devsql.server.hirezcorp.com:paladins_live_build_6_4, LangSrc=devsql.server.hirezcorp.com:paladins_translations,
+[0034.69] Log: Assembly load completed in 10.03 seconds
+[0036.09] Log: FMaterialUniformExpressionTexture had invalid TextureIndex! (2/2)
+[0036.10] Log: TFC Version check: Low= High=, Result=FALSE
+[0036.16] Log: Skipping adding Package OnlineSubsystemSteamworks to NetPackages
+[0036.17] Log: Skipping adding Package OnlineSubsystemPC to NetPackages
+[0039.94] Log: 139601 objects as part of root set at end of initial load.
+[0039.94] Log: 0 out of 0 bytes used by permanent object pool.
+[0039.94] Warning: StaticLoadObject for SwfMovie GFXFonts fonts_en couldn't find object in memory!
+[0039.97] Warning: Warning, Failed to load 'SwfMovie GFXFonts.fonts_en': Failed to find object 'SwfMovie GFXFonts.fonts_en'
+[0040.99] Log: Initializing Engine...
+[0041.25] Log: Discord Game SDK initialized 1
+[0041.62] Log: [FSocketWin::Bind] Binding to 0.0.0.0:7778
+[0041.62] DevNet: PComNetDriver_0(PEER) TcpNetDriver listening on port 7778
+[0042.32] Log: Couldn't find Master sound class! This class is required for the audio sound mode system to function!
+[0042.33] Log: Wwise(R) SDK Version 2016.2.3 Build 6077. Copyright (c) 2006-2012 Audiokinetic Inc. / All Rights Reserved.
+[0042.37] Log: Start loading WWise Package Lookup Tables
+[0046.02] Log: Finished loading Wwise Packages.
+[0046.20] Log: FViewport::UpdateViewportRHI(FALSE,1600,900,TRUE)
+[0046.20] Log: RENDERTHREADDEBUG - Calling Stop Rendering Thread for suspension
+[0046.20] Log: RENDERTHREADDEBUG - Calling Stop Rendering Thread
+[0046.22] Log: RENDERTHREADDEBUG - Calling Stop Rendering Thread for suspension
+[0046.22] Log: LogGPUDriverInfo: GetVideoDriverDetailsInvalid PrimaryIsNotTheChoosenAdapter GetVideoDriverDetailsInvalid PrimaryIsNotTheChoosenAdapter GetVideoDriverDetailsInvalid PrimaryIsNotTheChoosenAdapter GetVideoDriverDetailsInvalid PrimaryIsNotTheChoosenAdapter GetVideoDriverDetailsInvalid PrimaryIsNotTheChoosenAdapter FoundDriverCount:0 
+[0046.22] Log: D3D11 Driver Details:
+[0046.22] Log: Adapter Name: AMD Radeon(TM) Vega 11 Graphics
+[0046.22] Log: Driver Version Unknown (internal: Unknown)
+[0046.22] Log: Driver Date Unknown
+[0046.90] Log: CreateSwapChain with DXGI_SWAP_EFFECT_FLIP_DISCARD
+[0046.90] Log: RENDERTHREADDEBUG - Starting render thread after a suspend
+[0046.90] Log: RENDERTHREADDEBUG - Calling Start Rendering Thread
+[0046.95] Log: Logged in as 'XleftX'
+[0046.96] ScriptWarning: Script call stack:
+	Function TgClient.TgGameViewportClient:Init
+	Function PlatformCommon.PComGameViewportClient:Init
+	Function Engine.GameViewportClient:Init
+
+	TgGameViewportClient Transient.TgGameEngine_0:TgGameViewportClient_0
+	Function Engine.GameViewportClient:Init:0025
+[0046.96] ScriptWarning: Assertion failed, line 703
+	TgGameViewportClient Transient.TgGameEngine_0:TgGameViewportClient_0
+	Function Engine.GameViewportClient:Init:0025
+[0047.02] Warning: Warning, Failed to load 'Class None.': Failed to find object 'Class None.'
+[0047.10] Warning: Warning, Failed to find object 'Class None.'
+[0047.10] Warning: Warning, Failed to load 'Class None.': Failed to find object 'Class None.'
+[0047.10] Warning: Warning, Failed to find object 'Class None.'
+[0047.10] Warning: Warning, Failed to load 'Class None.': Failed to find object 'Class None.'
+[0047.10] Warning: Warning, Failed to find object 'Class None.'
+[0047.10] Warning: Warning, Failed to load 'Class None.': Failed to find object 'Class None.'
+[0047.10] Warning: Warning, Failed to find object 'Class None.'
+[0047.10] DevNet: Browse: LobbyMapV4_P?Name=Player?Team=255?DefaultCharacter=TgGame.TgCharacter
+[0047.10] Log: FEACClient::Send preload map event
+[0047.10] Log: FEACClient OnGameServerDisconnect
+[0047.11] Log: LoadMap: LobbyMapV4_P?Name=Player?Team=255?DefaultCharacter=TgGame.TgCharacter
+[0047.84] Log: Map Game ID = 0
+[0047.84] Log: Map Instance ID = 378856570
+[0047.87] Log: Performance: Critical section Lock/Unlock 27 nsec
+[0047.87] Log: Performance:  appCycles 29 nsec
+[0047.91] Log: Performance:  memCopy per KB 188 nsec
+[0047.93] Log: Performance:  memZero per KB 70 nsec
+[0047.93] Log: Performance:  appInterlockedIncrement 8 nsec
+[0047.94] Log: Performance:  GetTickCount 2 nsec
+[0047.94] TgSLO: Async Load: LobbyRefs_SF
+[0047.94] TgSLO: Async Load: LobbyUI_SF
+[0047.94] Log: Flushing async loaders. MinPriority=ALP_Immediate
+[0048.64] TgSLO: Finish Load: LobbyRefs_SF
+[0050.07] TgSLO: Finish Load: LobbyUI_SF
+[0050.07] Log: Flushed async loaders.
+[0050.07] Log: Game class is 'TgGameLaunch'
+[0050.10] Log: Match ID: 0
+[0050.54] Log: Primary PhysX scene will be in software.
+[0050.54] Log: Creating Primary PhysX Scene.
+[0050.80] Log: *** WARNING - PATHS MAY NOT BE VALID ***
+[0050.80] Log: Bringing World LobbyMapV4_P.TheWorld up for play (0) at 2023.07.08-17.49.33
+[0050.80] Log: Skipping initialization of FSMPartPool!
+[0050.81] Log: Bringing up level for play took: 0.710395
+[0050.81] Error: (Function Engine.GameInfo:ChoosePlayerStart:0102) Cannot use AllNavigationPoints() here - NavigationPointList not set up yet
+[0050.81] Log: Initializing custom image creator...
+[0050.87] Log: UTgGfxScene Initialize: UIMenuManager
+[0050.89] Log: Requested local load of 'patchnotes' JSON
+[0050.89] Log: JSON file exists at requested location. Triggering load...
+[0050.90] Log: Successfully loaded patchnotes JSON data. Attempting to parse...
+[0050.90] Log: Parsing successful. Loading patchnotes entries...
+[0050.90] Log: Successfully loaded 0 patchnotes entries in 0 patchnotes groups
+[0050.90] Log: TgClientHUD Begin Loading All Non-Experiment Scenes
+[0050.90] Log: TgClientHUD Finished Loading All Scenes
+[0050.90] Log: TgClientHUD Begin Loading All Experiment Scenes
+[0050.90] Log: TgClientHUD Load Scene: UIBackground
+[0050.90] Log: TgClientHUD Load Scene: UIStoreDetail
+[0050.90] Log: TgClientHUD Load Scene: UIHome
+[0050.90] Log: TgClientHUD Load Scene: UIStore
+[0050.90] Log: TgClientHUD Load Scene: UIPlay
+[0050.90] Log: TgClientHUD Load Scene: UIMatchLobby
+[0050.90] Log: TgClientHUD Load Scene: UIProfileLegacy
+[0050.90] Log: TgClientHUD Load Scene: UILeaderboard
+[0050.90] Log: TgClientHUD Load Scene: UISocial
+[0050.90] Log: TgClientHUD Load Scene: UIEndOfMatchLobby
+[0050.90] Log: TgClientHUD Load Scene: UICompetitive
+[0050.90] Log: TgClientHUD Load Scene: UIChampion
+[0050.90] Log: TgClientHUD Load Scene: UIChampionSelect
+[0050.90] Log: TgClientHUD Load Scene: UIChampionMastery
+[0050.90] Log: TgClientHUD Load Scene: UILogin
+[0050.90] Log: TgClientHUD Load Scene: UISettings
+[0050.90] Log: TgClientHUD Load Scene: UIEditLoadouts
+[0050.90] Log: TgClientHUD Load Scene: UIBattlePass
+[0050.90] Log: TgClientHUD Load Scene: UIChallengeSystem
+[0050.90] Log: TgClientHUD Load Scene: UIRadialMenuEquip
+[0050.90] Log: TgClientHUD Load Scene: UIAccessories
+[0050.90] Log: TgClientHUD Load Scene: UISendGift
+[0050.90] Log: TgClientHUD Load Scene: UICredits
+[0050.90] Log: TgClientHUD Load Scene: UIHeader
+[0050.90] Log: TgClientHUD Load Scene: UIFooter
+[0050.90] Log: TgClientHUD Load Scene: UILobbyChat
+[0050.90] Log: TgClientHUD Load Scene: UIProfileMini
+[0050.90] Log: TgClientHUD Load Scene: UINotificationCenter
+[0050.90] Log: TgClientHUD Load Scene: UIAccountLinkPopup
+[0050.90] Log: TgClientHUD Load Scene: UIDailyReward
+[0050.90] Log: TgClientHUD Load Scene: UIPopup
+[0050.90] Log: TgClientHUD Load Scene: UIPopupRealMoneyPurchase
+[0050.90] Log: TgClientHUD Load Scene: UIInputPopup
+[0050.90] Log: TgClientHUD Load Scene: UICompetitivePopupWelcome
+[0050.90] Log: TgClientHUD Load Scene: UICompetitiveRankedDecay
+[0050.90] Log: TgClientHUD Load Scene: UICompetitiveRankChange
+[0050.90] Log: TgClientHUD Load Scene: UIWebBrowser
+[0050.90] Log: TgClientHUD Load Scene: UIMatchInvite
+[0050.90] Log: TgClientHUD Load Scene: UILobbyBoosterSelect
+[0050.90] Log: TgClientHUD Load Scene: UILobbyBoosterActivation
+[0050.90] Log: TgClientHUD Load Scene: UIAcquisition
+[0050.90] Log: TgClientHUD Load Scene: UICouponAcquisition
+[0050.90] Log: TgClientHUD Load Scene: UIPurchase
+[0050.90] Log: TgClientHUD Load Scene: UIPopupPartyManager
+[0050.90] Log: TgClientHUD Load Scene: UITeamInvite
+[0050.90] Log: TgClientHUD Load Scene: UISkills
+[0050.90] Log: TgClientHUD Load Scene: UITalents
+[0050.90] Log: TgClientHUD Load Scene: UIPurchaseGems
+[0050.90] Log: TgClientHUD Load Scene: UIEOMLAcquisition
+[0050.90] Log: TgClientHUD Load Scene: UIPatchNotesPopup
+[0050.90] Log: TgClientHUD Load Scene: UIReferredRewardsPopup
+[0050.90] Log: TgClientHUD Load Scene: UIKeybindPopup
+[0050.90] Log: TgClientHUD Load Scene: UIGameMenu
+[0050.90] Log: TgClientHUD Load Scene: UIFacebookLivePopup
+[0050.90] Log: TgClientHUD Load Scene: UIPopupChampionLevelUp
+[0050.90] Log: TgClientHUD Load Scene: UIPlaySettings
+[0050.90] Log: TgClientHUD Load Scene: UIStoreFilterPopup
+[0050.90] Log: TgClientHUD Load Scene: UIStoreRentSprayPopup
+[0050.90] Log: TgClientHUD Load Scene: UIPopupDeal
+[0050.90] Log: TgClientHUD Load Scene: UIBattlePassXPPurchase
+[0050.90] Log: TgClientHUD Load Scene: UIFullScreen
+[0050.90] Log: TgClientHUD Load Scene: UIMatchLobbyTradePopup
+[0050.90] Log: TgClientHUD Load Scene: UIFullScreenBattlePass
+[0050.90] Log: TgClientHUD Load Scene: UICommendationRewards
+[0050.90] Log: TgClientHUD Load Scene: UIBattlePassLevelUp
+[0050.90] Log: TgClientHUD Load Scene: UIBattlePassPurchase
+[0050.90] Log: TgClientHUD Load Scene: UISimulMedia
+[0050.90] Log: TgClientHUD Load Scene: UIQuestsPopup
+[0050.90] Log: TgClientHUD Load Scene: UIAchievementPopups
+[0050.90] Log: TgClientHUD Load Scene: UINotificationPopup
+[0050.90] Log: TgClientHUD Load Scene: UISafeFrame
+[0050.90] Log: TgClientHUD Load Scene: UIFooterGamepad
+[0050.90] Log: TgClientHUD Load Scene: UIFade
+[0050.90] Log: TgClientHUD Load Scene: UIFacebookLiveIndicator
+[0050.90] Log: TgClientHUD Finished Loading All Scenes
+[0050.90] Log: [LobbyStateLog] Changing lobby state from 0 to 1.
+[0050.90] Exit: PComNetDriver_0(PEER) shut down
+[0050.90] Log: [FSocketWin::Bind] Binding to 0.0.0.0:7778
+[0050.90] DevNet: PComNetDriver_1(PEER) TcpNetDriver listening on port 7778
+[0050.91] Log: ########### Finished loading level: 3.797623 seconds
+[0050.92] Log: Flushing async loaders. MinPriority=ALP_None
+[0052.03] Log: Flushed async loaders.
+[0052.19] Log: Starting RedrawViewports for texture streaming..
+[0052.27] Log: RedrawViewports took: 0.083010 seconds
+[0052.27] Log: Starting Level load StreamAllResources..
+[0052.61] Log: Level load StreamAllResources took: 0.334724 seconds
+[0052.61] Log: Initializing Engine Completed
+[0052.61] Log: >>>>>>>>>>>>>> Initial startup: 52.61s <<<<<<<<<<<<<<<
+[0052.61] Log: Browser user data directory is C:\Users\PC\AppData\Local\Temp\BrowserCache\Chaos
+[0053.02] VoiceChat: m_Vivox.LeaveAll(m_VivoxAccountName) returned status ID: 1001 Message Required Object does not exist
+[0053.27] VoiceChat: Info  VivoxApi::CommandHandler::ProcessRequest(645) - this=0x1a657351fe0,ToXml(request, true)=<Request requestId="" action="Connector.SetLocalSpeakerVolume.1"><ConnectorHandle /><Value>48</Value></Request>
+[0053.27] VoiceChat: Info  VivoxApi::CommandHandler::ProcessRequest(645) - this=0x1a657351fe0,ToXml(request, true)=<Request requestId="" action="Connector.SetLocalMicVolume.1"><ConnectorHandle /><Value>60</Value></Request>
+[0053.27] VoiceChat: Info  VivoxApi::CommandHandler::PassCommand(812) - this=0x1a657351fe0,ToXml(&command->GetResp().base, true)=<Response requestId="" action="Connector.SetLocalSpeakerVolume.1"><ReturnCode>0</ReturnCode><Results><StatusCode>0</StatusCode><StatusString /></Results><InputXml><Request requestId="" action="Connector.SetLocalSpeakerVolume.1"><ConnectorHandle /><Value>48</Value></Request></InputXml></Response>
+[0053.27] VoiceChat: Info  VivoxApi::CommandHandler::PassCommand(812) - this=0x1a657351fe0,ToXml(&command->GetResp().base, true)=<Response requestId="" action="Connector.SetLocalMicVolume.1"><ReturnCode>0</ReturnCode><Results><StatusCode>0</StatusCode><StatusString /></Results><InputXml><Request requestId="" action="Connector.SetLocalMicVolume.1"><ConnectorHandle /><Value>60</Value></Request></InputXml></Response>
+[0053.32] Log: [Party] APComPlayerController::UpdateMCTSSession( 109775243099645054, 1 )
+[0053.37] Log: UTgGfxScene Initialize: UIBackground
+[0053.42] Log: UTgGfxScene Initialize: UIStoreDetail
+[0053.43] Warning: Warning, Failed to load 'Font None.Montserrat SemiBold': Failed to find object 'Font None.Montserrat SemiBold'
+[0053.44] Warning: Warning, Failed to load 'Font None.Montserrat SemiBold': Failed to find object 'Font None.Montserrat SemiBold'
+[0053.44] Warning: Warning, Failed to load 'Font None.Montserrat SemiBold': Failed to find object 'Font None.Montserrat SemiBold'
+[0053.44] Warning: Warning, Failed to load 'Font None.Montserrat SemiBold': Failed to find object 'Font None.Montserrat SemiBold'
+[0053.44] Warning: Warning, Failed to load 'Font None.Montserrat SemiBold': Failed to find object 'Font None.Montserrat SemiBold'
+[0053.44] Warning: Warning, Failed to load 'Font None.Montserrat SemiBold': Failed to find object 'Font None.Montserrat SemiBold'
+[0053.44] Warning: Warning, Failed to load 'Font None.Montserrat SemiBold': Failed to find object 'Font None.Montserrat SemiBold'
+[0053.44] Warning: Warning, Failed to load 'Font None.Montserrat SemiBold': Failed to find object 'Font None.Montserrat SemiBold'
+[0053.44] Warning: Warning, Failed to load 'Font None.Montserrat SemiBold': Failed to find object 'Font None.Montserrat SemiBold'
+[0053.44] Warning: Warning, Failed to load 'Font None.Montserrat SemiBold': Failed to find object 'Font None.Montserrat SemiBold'
+[0053.44] Warning: Warning, Failed to load 'Font None.Montserrat SemiBold': Failed to find object 'Font None.Montserrat SemiBold'
+[0053.44] Warning: Warning, Failed to load 'Font None.Montserrat SemiBold': Failed to find object 'Font None.Montserrat SemiBold'
+[0053.44] Warning: Warning, Failed to load 'Font None.Montserrat SemiBold': Failed to find object 'Font None.Montserrat SemiBold'
+[0053.44] Warning: Warning, Failed to load 'Font None.Montserrat SemiBold': Failed to find object 'Font None.Montserrat SemiBold'
+[0053.44] Warning: Warning, Failed to load 'Font None.Montserrat SemiBold': Failed to find object 'Font None.Montserrat SemiBold'
+[0053.44] Warning: Warning, Failed to load 'Font None.Montserrat SemiBold': Failed to find object 'Font None.Montserrat SemiBold'
+[0053.44] Warning: Warning, Failed to load 'Font None.Montserrat SemiBold': Failed to find object 'Font None.Montserrat SemiBold'
+[0053.44] Warning: Warning, Failed to load 'Font None.Montserrat SemiBold': Failed to find object 'Font None.Montserrat SemiBold'
+[0053.51] Log: UTgGfxScene Initialize: UIHome
+[0054.07] Log: UTgGfxScene Initialize: UIStore
+[0054.54] Log: UTgGfxScene Initialize: UIPlay
+[0054.83] Log: UTgGfxScene Initialize: UIMatchLobby
+[0055.28] Log: UTgGfxScene Initialize: UIProfileLegacy
+[0055.53] Log: UTgGfxScene Initialize: UILeaderboard
+[0055.60] Log: UTgGfxScene Initialize: UISocial
+[0055.94] Log: UTgGfxScene Initialize: UIEndOfMatchLobby
+[0056.14] Log: UTgGfxScene Initialize: UICompetitive
+[0056.28] Log: UTgGfxScene Initialize: UIChampion
+[0056.37] Log: UTgGfxScene Initialize: UIChampionSelect
+[0056.46] Log: UTgGfxScene Initialize: UIChampionMastery
+[0056.48] Log: UTgGfxScene Initialize: UILogin
+[0056.56] Log: UTgGfxScene Initialize: UISettings
+[0056.66] Log: UTgGfxScene Initialize: UIEditLoadouts
+[0056.83] Log: UTgGfxScene Initialize: UIBattlePass
+[0056.91] Log: UTgGfxScene Initialize: UIChallengeSystem
+[0056.94] Log: UTgGfxScene Initialize: UIRadialMenuEquip
+[0057.01] Log: UTgGfxScene Initialize: UIAccessories
+[0057.07] Log: UTgGfxScene Initialize: UISendGift
+[0057.09] Log: UTgGfxScene Initialize: UICredits
+[0057.11] Log: UTgGfxScene Initialize: UIHeader
+[0057.12] Log: UTgGfxScene Initialize: UIFooter
+[0057.13] Log: UTgGfxScene Initialize: UILobbyChat
+[0057.21] Log: UTgGfxScene Initialize: UIProfileMini
+[0057.27] Log: UTgGfxScene Initialize: UINotificationCenter
+[0057.30] Log: UTgGfxScene Initialize: UIAccountLinkPopup
+[0057.32] Log: UTgGfxScene Initialize: UIDailyReward
+[0057.33] Log: UTgGfxScene Initialize: UIPopup
+[0057.34] Log: UTgGfxScene Initialize: UIPopupRealMoneyPurchase
+[0057.35] Log: UTgGfxScene Initialize: UIInputPopup
+[0057.37] Log: UTgGfxScene Initialize: UICompetitivePopupWelcome
+[0057.39] Log: UTgGfxScene Initialize: UICompetitiveRankDecay
+[0057.39] Log: UTgGfxScene Initialize: UICompetitiveRankChange
+[0057.40] Log: UTgGfxScene Initialize: UIWebBrowser
+[0057.40] Log: UTgGfxScene Initialize: UIMatchInvite
+[0057.41] Log: UTgGfxScene Initialize: UILobbyBoosterSelect
+[0057.42] Log: UTgGfxScene Initialize: UILobbyBoosterActivation
+[0057.48] Log: UTgGfxScene Initialize: UIAcquisition
+[0057.51] Log: UTgGfxScene Initialize: UICouponAcquisition
+[0057.57] Log: UTgGfxScene Initialize: UIPurchase
+[0057.60] Log: UTgGfxScene Initialize: UIPopupPartyManager
+[0057.61] Log: UTgGfxScene Initialize: TgGfxTeamInvite
+[0057.61] Log: UTgGfxScene Initialize: UISkills
+[0057.62] Log: UTgGfxScene Initialize: UITalents
+[0057.65] Log: UTgGfxScene Initialize: UIPurchaseGems
+[0057.68] Log: UTgGfxScene Initialize: UIEOMLAcquisition
+[0057.70] Log: UTgGfxScene Initialize: UIPatchNotesPopup
+[0057.71] Log: UTgGfxScene Initialize: UIReferredRewardsPopup
+[0057.71] Log: UTgGfxScene Initialize: UIKeybindPopup
+[0057.72] Log: UTgGfxScene Initialize: UIGameMenu
+[0057.72] Log: UTgGfxScene Initialize: UIFacebookLivePopup
+[0057.74] Log: UTgGfxScene Initialize: UIPopupChampionLevelUp
+[0057.74] Log: UTgGfxScene Initialize: UIPopupPlaySettings
+[0057.76] Log: UTgGfxScene Initialize: UIStoreFilterPopup
+[0057.78] Log: UTgGfxScene Initialize: UIStoreRentSprayPopup
+[0057.79] Log: UTgGfxScene Initialize: UIPopupDeal
+[0057.81] Log: UTgGfxScene Initialize: UIBattlePassXPPurchase
+[0057.82] Log: UTgGfxScene Initialize: UIFullScreen
+[0057.82] Log: UTgGfxScene Initialize: UIMatchLobbyTradePopup
+[0057.83] Log: UTgGfxScene Initialize: UIFullScreenBattlePass
+[0057.84] Log: UTgGfxScene Initialize: UICommendationRewards
+[0057.97] Log: UTgGfxScene Initialize: UIBattlePassLevelUp
+[0057.98] Log: UTgGfxScene Initialize: UIBattlePassPurchase
+[0058.07] Log: UTgGfxScene Initialize: UISimulMedia
+[0058.11] Log: UTgGfxScene Initialize: UIQuestsPopup
+[0058.13] Log: UTgGfxScene Initialize: UIAchievementPopups
+[0058.15] Log: UTgGfxScene Initialize: UINotificationPopup
+[0058.16] Log: UTgGfxScene Initialize: UISafeFrame
+[0058.17] Log: UTgGfxScene Initialize: UIFooterGamepad
+[0058.17] Log: UTgGfxScene Initialize: UIFade
+[0058.17] Log: UTgGfxScene Initialize: UIFacebookLiveIndicator
+[0058.17] Warning: StaticLoadObject for SwfMovie MenuManager undefined couldn't find object in memory!
+[0058.17] Warning: Warning, Failed to load 'SwfMovie MenuManager.undefined': Failed to find object 'SwfMovie MenuManager.undefined'
+[0058.17] Log: GFx attempted to load missing object [MenuManager.undefined]
+[0058.17] Warning: StaticLoadObject for SwfMovie MenuManager undefined couldn't find object in memory!
+[0058.17] Warning: Warning, Failed to load 'SwfMovie MenuManager.undefined': Failed to find object 'SwfMovie MenuManager.undefined'
+[0058.17] Log: GFx attempted to load missing object [MenuManager.undefined]
+[0058.17] Warning: StaticLoadObject for SwfMovie MenuManager undefined couldn't find object in memory!
+[0058.17] Warning: Warning, Failed to load 'SwfMovie MenuManager.undefined': Failed to find object 'SwfMovie MenuManager.undefined'
+[0058.17] Log: GFx attempted to load missing object [MenuManager.undefined]
+[0058.17] Warning: StaticLoadObject for SwfMovie MenuManager undefined couldn't find object in memory!
+[0058.17] Warning: Warning, Failed to load 'SwfMovie MenuManager.undefined': Failed to find object 'SwfMovie MenuManager.undefined'
+[0058.17] Log: GFx attempted to load missing object [MenuManager.undefined]
+[0058.17] Warning: StaticLoadObject for SwfMovie MenuManager undefined couldn't find object in memory!
+[0058.17] Warning: Warning, Failed to load 'SwfMovie MenuManager.undefined': Failed to find object 'SwfMovie MenuManager.undefined'
+[0058.17] Log: GFx attempted to load missing object [MenuManager.undefined]
+[0058.17] Warning: StaticLoadObject for SwfMovie MenuManager undefined couldn't find object in memory!
+[0058.17] Warning: Warning, Failed to load 'SwfMovie MenuManager.undefined': Failed to find object 'SwfMovie MenuManager.undefined'
+[0058.17] Log: GFx attempted to load missing object [MenuManager.undefined]
+[0058.17] Warning: StaticLoadObject for SwfMovie MenuManager undefined couldn't find object in memory!
+[0058.17] Warning: Warning, Failed to load 'SwfMovie MenuManager.undefined': Failed to find object 'SwfMovie MenuManager.undefined'
+[0058.17] Log: GFx attempted to load missing object [MenuManager.undefined]
+[0058.17] Warning: StaticLoadObject for SwfMovie MenuManager undefined couldn't find object in memory!
+[0058.17] Warning: Warning, Failed to load 'SwfMovie MenuManager.undefined': Failed to find object 'SwfMovie MenuManager.undefined'
+[0058.17] Log: GFx attempted to load missing object [MenuManager.undefined]
+[0058.17] Warning: StaticLoadObject for SwfMovie MenuManager undefined couldn't find object in memory!
+[0058.17] Warning: Warning, Failed to load 'SwfMovie MenuManager.undefined': Failed to find object 'SwfMovie MenuManager.undefined'
+[0058.17] Log: GFx attempted to load missing object [MenuManager.undefined]
+[0058.18] Warning: StaticLoadObject for SwfMovie MenuManager undefined couldn't find object in memory!
+[0058.18] Warning: Warning, Failed to load 'SwfMovie MenuManager.undefined': Failed to find object 'SwfMovie MenuManager.undefined'
+[0058.18] Log: GFx attempted to load missing object [MenuManager.undefined]
+[0058.18] Warning: StaticLoadObject for SwfMovie MenuManager undefined couldn't find object in memory!
+[0058.18] Warning: Warning, Failed to load 'SwfMovie MenuManager.undefined': Failed to find object 'SwfMovie MenuManager.undefined'
+[0058.18] Log: GFx attempted to load missing object [MenuManager.undefined]
+[0058.18] Warning: StaticLoadObject for SwfMovie MenuManager undefined couldn't find object in memory!
+[0058.18] Warning: Warning, Failed to load 'SwfMovie MenuManager.undefined': Failed to find object 'SwfMovie MenuManager.undefined'
+[0058.18] Log: GFx attempted to load missing object [MenuManager.undefined]
+[0058.18] Warning: StaticLoadObject for SwfMovie MenuManager undefined couldn't find object in memory!
+[0058.18] Warning: Warning, Failed to load 'SwfMovie MenuManager.undefined': Failed to find object 'SwfMovie MenuManager.undefined'
+[0058.18] Log: GFx attempted to load missing object [MenuManager.undefined]
+[0058.18] Warning: StaticLoadObject for SwfMovie MenuManager undefined couldn't find object in memory!
+[0058.18] Warning: Warning, Failed to load 'SwfMovie MenuManager.undefined': Failed to find object 'SwfMovie MenuManager.undefined'
+[0058.18] Log: GFx attempted to load missing object [MenuManager.undefined]
+[0058.18] Warning: StaticLoadObject for SwfMovie MenuManager undefined couldn't find object in memory!
+[0058.18] Warning: Warning, Failed to load 'SwfMovie MenuManager.undefined': Failed to find object 'SwfMovie MenuManager.undefined'
+[0058.18] Log: GFx attempted to load missing object [MenuManager.undefined]
+[0058.58] Warning: TgLobbyCamera_15 has unsupported physics mode 8
+[0059.62] Log: UUILogin::LoginReady: 0
+[0060.84] Log: Command not recognized: FlashReleaseMouse
+[0063.40] Log: Automatically detetecting settings: VID-0x1002 DID-0x15DD SLVL-55550-4096x2160 FLVL-55550-1600x900
+[0066.26] VoiceChat: Info  VivoxApi::CommandHandler::ProcessRequest(645) - this=0x1a657351fe0,ToXml(request, true)=<Request requestId="C0" action="Connector.Create.1"><ClientName /><AttemptStun>AttemptStunUnspecified</AttemptStun><Mode>Normal</Mode><AccountManagementServer>https://hrpp.www.vivox.com/api2/</AccountManagementServer><MinimumPort>0</MinimumPort><MaximumPort>0</MaximumPort><Logging><Folder /><FileNamePrefix /><FileNameSuffix /><LogLevel>2</LogLevel></Logging><SessionHandleType>Unique</SessionHandleType><Application>Chaos</Application><MaxCalls>6</MaxCalls><AllowCrossDomainLogins>true</AllowCrossDomainLogins><DefaultCodec>1</DefaultCodec><UserAgentId /><MediaProbeServer /><HttpProxyServer /><HttpProxyServerPort>0</HttpProxyServerPort><EnableDuplicateParticipantUris>0</EnableDuplicateParticipantUris><ConnectorHandle>C0</ConnectorHandle><ConfiguredCodecs>39</ConfiguredCodecs></Request>
+[0066.26] Log: [RallyHereEvent] FRH_EventClientInterface::GrabAppSettings updated URL is https://collect.analytics.unity3d.com/collect/api/project/5796e3e8-ac45-4543-9f7d-061279eb9915/production
+[0066.26] Log: [RallyHereEvent] FRH_EventClientInterface::GrabAppSettings Event sending enabled: false
+[0066.26] Log: TgClientHUD Begin Loading All Non-Experiment Scenes
+[0066.26] Log: TgClientHUD Load Scene: UIProfile
+[0066.26] Log: TgClientHUD Load Scene: UIItemPreview
+[0066.26] Log: TgClientHUD Load Scene: UIStoreAccessories
+[0066.26] Log: TgClientHUD Load Scene: UIStoreLanding
+[0066.26] Log: TgClientHUD Finished Loading All Scenes
+[0066.30] Log: [Party] APComPlayerController::UpdateMCTSSession( 109775243099645054, 1 )
+[0066.55] Log: UPComJsonHandler::RequestNewJson called with url: http://cds.q6u4m8x5.hwcdn.net/LandingPanel/Paladins/live//landingpanel.json
+[0067.21] Log: UILandingPanelManager_0 ParseSection ended array construction with a non zero probability 1
+[0067.62] Log: UILandingPanelManager_0 ParseSection ended array construction with a non zero probability 1
+[0067.63] Log: UILandingPanelManager_0 ParseSection ended array construction with a non zero probability 1
+[0067.65] Log: UILandingPanelManager_0 ParseSection ended array construction with a non zero probability 1
+[0067.66] Log: UILandingPanelManager_0 ParseSection ended array construction with a non zero probability 1
+[0067.67] Log: UILandingPanelManager_0 ParseSection ended array construction with a non zero probability 1
+[0067.68] Log: UILandingPanelManager_0 ParseSection ended array construction with a non zero probability 1
+[0067.70] Log: UILandingPanelManager_0 ParseSection ended array construction with a non zero probability 1
+[0067.72] Log: UILandingPanelManager_0 ParseSection ended array construction with a non zero probability 1
+[0067.74] Log: UILandingPanelManager_0 ParseSection ended array construction with a non zero probability 1
+[0067.75] Log: UILandingPanelManager_0 ParseSection ended array construction with a non zero probability 1
+[0067.77] Log: UILandingPanelManager_0 ParseSection ended array construction with a non zero probability 1
+[0067.78] Log: UILandingPanelManager_0 ParseSection ended array construction with a non zero probability 1
+[0067.79] Log: UILandingPanelManager_0 ParseSection ended array construction with a non zero probability 1
+[0067.81] Log: UILandingPanelManager_0 ParseSection ended array construction with a non zero probability 1
+[0067.89] Log: UILandingPanelManager_0 ParseSection ended array construction with a non zero probability 1
+[0067.91] Log: UILandingPanelManager_0 ParseSection ended array construction with a non zero probability 1
+[0067.92] Log: UILandingPanelManager_0 ParseSection ended array construction with a non zero probability 1
+[0067.94] Log: UILandingPanelManager_0 ParseSection ended array construction with a non zero probability 1
+[0067.95] VoiceChat: Warn  VivoxAmSip::AmProvider::Initialize(351) - am_network_start() trying retval=0,port + offset=45400,port=45370
+[0067.95] VoiceChat: Warn  VivoxAmSip::AmProvider::Initialize(353) - am_network_start() returned retval=1,port + offset=45400,port=45370
+[0067.95] Log: UILandingPanelManager_0 ParseSection ended array construction with a non zero probability 1
+[0067.96] VoiceChat: Info  VivoxApi::CommandHandler::PassCommand(812) - this=0x1a657351fe0,ToXml(&command->GetResp().base, true)=<Response requestId="C0" action="Connector.Create.1"><ReturnCode>0</ReturnCode><Results><StatusCode>0</StatusCode><StatusString /><VersionID>4.9.0002.31672</VersionID><ConnectorHandle>C0</ConnectorHandle></Results><InputXml><Request requestId="C0" action="Connector.Create.1"><ClientName /><AttemptStun>AttemptStunUnspecified</AttemptStun><Mode>Normal</Mode><AccountManagementServer>https://hrpp.www.vivox.com/api2/</AccountManagementServer><MinimumPort>0</MinimumPort><MaximumPort>0</MaximumPort><Logging><Folder /><FileNamePrefix /><FileNameSuffix /><LogLevel>2</LogLevel></Logging><SessionHandleType>Unique</SessionHandleType><Application>Chaos</Application><MaxCalls>6</MaxCalls><AllowCrossDomainLogins>true</AllowCrossDomainLogins><DefaultCodec>1</DefaultCodec><UserAgentId /><MediaProbeServer /><HttpProxyServer /><HttpProxyServerPort>0</HttpProxyServerPort><EnableDuplicateParticipantUris>0</EnableDuplicateParticipantUris><ConnectorHandle>C0</ConnectorHandle><ConfiguredCodecs>39</ConfiguredCodecs></Request></InputXml></Response>
+[0067.96] Log: UILandingPanelManager_0 ParseSection ended array construction with a non zero probability 1
+[0067.98] Log: UILandingPanelManager_0 ParseSection ended array construction with a non zero probability 1
+[0067.99] Log: UILandingPanelManager_0 ParseSection ended array construction with a non zero probability 1
+[0068.00] Log: UILandingPanelManager_0 ParseSection ended array construction with a non zero probability 1
+[0068.02] Log: UILandingPanelManager_0 ParseSection ended array construction with a non zero probability 1
+[0068.04] Log: UILandingPanelManager_0 ParseSection ended array construction with a non zero probability 1
+[0068.13] Log: UILandingPanelManager_0 ParseSection ended array construction with a non zero probability 1
+[0068.26] Log: UILandingPanelManager_0 ParseSection ended array construction with a non zero probability 1
+[0068.36] Log: UILandingPanelManager_0 ParseSection ended array construction with a non zero probability 1
+[0068.40] Log: UILandingPanelManager_0 ParseSection ended array construction with a non zero probability 1
+[0068.42] Log: UILandingPanelManager_0 ParseSection ended array construction with a non zero probability 1
+[0068.43] Log: UILandingPanelManager_0 ParseSection ended array construction with a non zero probability 1
+[0068.45] Log: UILandingPanelManager_0 ParseSection ended array construction with a non zero probability 1
+[0068.47] Log: UILandingPanelManager_0 ParseSection ended array construction with a non zero probability 1
+[0068.49] Log: UILandingPanelManager_0 ParseSection ended array construction with a non zero probability 1
+[0068.51] Log: UILandingPanelManager_0 ParseSection ended array construction with a non zero probability 1
+[0068.61] Log: UILandingPanelManager_0 ParseSection ended array construction with a non zero probability 1
+[0068.71] Log: UILandingPanelManager_0 ParseSection ended array construction with a non zero probability 1
+[0068.71] Log: UPComJsonHandler::RequestNewJson called with url: http://cds.q6u4m8x5.hwcdn.net/LandingPanel/Paladins/live//seasonticket.json
+[0069.37] Log: UpdatePlatformActivities: Exiting due to missing activities
+[0069.37] Log: UILandingPanelManager_0 ParseSection ended array construction with a non zero probability 1
+[0069.38] TgSLO: Async Load: ANNOUNCERPACKASSETS_SF (ItemReferencer18647)
+[0069.38] Log: Map Game ID = 0
+[0069.38] Log: Map Instance ID = 378856570
+[0069.40] Log: Performance: Critical section Lock/Unlock 21 nsec
+[0069.40] Log: Performance:  appCycles 27 nsec
+[0069.43] Log: Performance:  memCopy per KB 124 nsec
+[0069.44] Log: Performance:  memZero per KB 72 nsec
+[0069.45] Log: Performance:  appInterlockedIncrement 7 nsec
+[0069.45] Log: Performance:  GetTickCount 2 nsec
+[0069.46] VoiceChat: UpdateVivox: Logging in as .2bb7791a., token e30.eyJpc3MiOiJwYWxhZGlucy1nc2MiLCJleHAiOjE2ODg4NTY3NjYsInZ4YSI6ImxvZ2luIiwidnhpIjo0NTE1NTAxLCJmIjoic2lwOi4yYmI3NzkxYS5AaHJwcC52aXZveC5jb20ifQ.dKx_mYsJl9K3w_rENJw_Cv4OAxCNY75ndWwA7TBVX_8
+[0069.46] Log: [UIDataShop] Started Storing DLC/Marketplace Item Data...
+[0069.46] Log: [UIDataShop] Finished Storing DLC/Marketplace Item Data!
+[0069.46] Log: UOnlineSubsystemSteamworks::ProcessPlayerProfileUpdate: Exiting due to missing activities
+[0069.46] Log: UpdatePlatformActivities: Exiting due to missing activities
+[0069.46] Log: [UIDataShop] Started Storing DLC/Marketplace Item Data...
+[0069.46] Log: [UIDataShop] Finished Storing DLC/Marketplace Item Data!
+[0069.46] Log: UOnlineSubsystemSteamworks::ProcessPlayerProfileUpdate: Exiting due to missing activities
+[0069.46] Log: UpdatePlatformActivities: Exiting due to missing activities
+[0069.46] Log: [MATCH LOBBY LOG]: RecievedMatchStatus, QueueId: 0, MatchId: 0
+[0069.46] Log: [MATCH LOBBY LOG]: RecievedMatchStatus MCTS, LaunchTime: 0, MatchLobbyState: 0, QueueState: 0, PlayerLobbyState: 0, MatchId 0, QueueId 0
+[0069.46] Log: [UIDataShop] Started Storing DLC/Marketplace Item Data...
+[0069.46] Log: [UIDataShop] Finished Storing DLC/Marketplace Item Data!
+[0069.46] Log: UOnlineSubsystemSteamworks::ProcessPlayerProfileUpdate: Exiting due to missing activities
+[0069.46] Log: UpdatePlatformActivities: Exiting due to missing activities
+[0069.48] Log: RequestingChannelMembers ch[4]
+[0069.48] Log: [UIDataShop] Started Storing DLC/Marketplace Item Data...
+[0069.48] Log: [UIDataShop] Finished Storing DLC/Marketplace Item Data!
+[0069.48] Log: UOnlineSubsystemSteamworks::ProcessPlayerProfileUpdate: Exiting due to missing activities
+[0069.48] Log: UpdatePlatformActivities: Exiting due to missing activities
+[0069.48] Log: [UIDataShop] Started Storing DLC/Marketplace Item Data...
+[0069.48] Log: [UIDataShop] Finished Storing DLC/Marketplace Item Data!
+[0069.48] Log: UOnlineSubsystemSteamworks::ProcessPlayerProfileUpdate: Exiting due to missing activities
+[0069.48] Log: UpdatePlatformActivities: Exiting due to missing activities
+[0069.49] Log: [Chat Privileges] Posting message
+[0069.49] Log: Chat[9]: �Te damos la bienvenida a Paladins!
+[0069.49] Log: UTgGfxScene Initialize: UIChatTab
+[0070.00] Log: UTgGfxScene Initialize: UIProfile
+[0070.27] Log: UTgGfxScene Initialize: UIItemPreview
+[0070.41] Log: UTgGfxScene Initialize: UIStoreAccessories
+[0070.56] Log: UTgGfxScene Initialize: UIStoreLanding
+[0070.61] VoiceChat: CVoiceInterfaceVivox::onConnectCompleted (https://hrpp.www.vivox.com/api2/)
+[0070.62] VoiceChat: Info  VivoxApi::CommandHandler::ProcessRequest(645) - this=0x1a657351fe0,ToXml(request, true)=<Request requestId="A1" action="Account.AnonymousLogin.1"><ConnectorHandle>C0</ConnectorHandle><DisplayName>.2bb7791a.</DisplayName><ParticipantPropertyFrequency>100</ParticipantPropertyFrequency><EnableBuddiesAndPresence>false</EnableBuddiesAndPresence><BuddyManagementMode>AutoAccept</BuddyManagementMode><AutopostCrashDumps>true</AutopostCrashDumps><AccountManagementServer /><AppToken /><ApplicationOverride /><EnablePresencePersistence>false</EnablePresencePersistence><AccountHandle>A1</AccountHandle><AcctName>.2bb7791a.</AcctName><AccessToken>e30.eyJpc3MiOiJwYWxhZGlucy1nc2MiLCJleHAiOjE2ODg4NTY3NjYsInZ4YSI6ImxvZ2luIiwidnhpIjo0NTE1NTAxLCJmIjoic2lwOi4yYmI3NzkxYS5AaHJwcC52aXZveC5jb20ifQ.dKx_mYsJl9K3w_rENJw_Cv4OAxCNY75ndWwA7TBVX_8</AccessToken></Request>
+[0070.62] Log: [UIDataShop] Started Storing DLC/Marketplace Item Data...
+[0070.62] Log: [UIDataShop] Finished Storing DLC/Marketplace Item Data!
+[0070.62] Log: [UIDataShop] Started Storing DLC/Marketplace Item Data...
+[0070.62] Log: [UIDataShop] Finished Storing DLC/Marketplace Item Data!
+[0070.63] Log: [UIDataShop] Started Storing DLC/Marketplace Item Data...
+[0070.63] Log: [UIDataShop] Finished Storing DLC/Marketplace Item Data!
+[0070.64] Log: FViewport::UpdateViewportRHI(TRUE,0,0,FALSE)
+[0070.72] VoiceChat: Info  VivoxApi::CommandHandler::PostEvent(829) - this=0x1a657351fe0,ToXml(p, true)=<Event type="AccountLoginStateChangeEvent"><AccountHandle>A1</AccountHandle><StatusCode>0</StatusCode><StatusString /><State>2</State><RequestId>A1</RequestId></Event>
+[0070.72] Log: RENDERTHREADDEBUG - Calling Stop Rendering Thread for suspension
+[0070.72] Log: RENDERTHREADDEBUG - Calling Stop Rendering Thread
+[0070.74] Log: RENDERTHREADDEBUG - Starting render thread after a suspend
+[0070.74] Log: RENDERTHREADDEBUG - Calling Start Rendering Thread
+[0071.67] VoiceChat: Info  VivoxAmSip::AmProvider::DispatchEvent(682) - this=0x1a669572ab0,VivoxAmSip::ToString(evt)= {  type=EXOSIP_REGISTRATION_SUCCESS external_reference=0x7ffa3107bc48 request= { REGISTER sip:hrpp.disp.vivox.com:6250 SIP/2.0\r\nVia: SIP/2.0/UDP 192.168.0.6:45400;rport;branch=z9hG4bK912823985\r\nFrom: <sip:.2bb7791a.@hrpp.vivox.com>;tag=3610803961\r\nTo: <sip:.2bb7791a.@hrpp.vivox.com>\r\nCall-ID: 3477571898\r\nCSeq: 1 REGISTER\r\nContact: <sip:.2bb7791a.@192.168.0.6:45400;line=316d3181079c026>;q=1\r\nMax-Forwards: 70\r\nUser-Agent: Vivox-SDK-4.9.0002.31672W\r\nExpires: 1200\r\nVxApplication: Chaos\r\nContent-Length: 0\r\n\r\n }  response= { SIP/2.0 200 OK\r\nVia: SIP/2.0/UDP 192.168.0.6:45400;rport=59579;branch=z9hG4bK912823985;received=179.6.168.171\r\nFrom: <sip:.2bb7791a.@hrpp.vivox.com>;tag=3610803961\r\nTo: <sip:.2bb7791a.@hrpp.vivox.com>;tag=48438906dbb45ee3141f2fa0f36a97f9.52ac\r\nCall-ID: 3477571898\r\nCSeq: 1 REGISTER\r\nContact: <sip:.2bb7791a.@192.168.0.6:45400;line=316d3181079c026>;q=1;expires=1200;received="sip:179.6.168.171:59579;dstip=74.201.107.148;dstport=6250"\r\nDate: Sat, 08 Jul 2023 22:49:53 GMT\r\nContent-Length: 0\r\n\r\n }  ack= { (null) }  tid=0 did=0 rid=1 cid=0 sid=0 nid=0 ss_status=0 ss_reason=0 } 
+[0071.67] VoiceChat: Info  VivoxApi::CommandHandler::PassCommand(812) - this=0x1a657351fe0,ToXml(&command->GetResp().base, true)=<Response requestId="A1" action="Account.AnonymousLogin.1"><ReturnCode>0</ReturnCode><Results><StatusCode>200</StatusCode><StatusString /><AccountHandle>A1</AccountHandle><DisplayName>.2bb7791a.</DisplayName><AccountID>0</AccountID><Uri>sip:.2bb7791a.@hrpp.vivox.com</Uri><EncodedUriWithTag>sip:.2bb7791a.@hrpp.vivox.com</EncodedUriWithTag></Results><InputXml><Request requestId="A1" action="Account.AnonymousLogin.1"><ConnectorHandle>C0</ConnectorHandle><DisplayName>.2bb7791a.</DisplayName><ParticipantPropertyFrequency>100</ParticipantPropertyFrequency><EnableBuddiesAndPresence>false</EnableBuddiesAndPresence><BuddyManagementMode>AutoAccept</BuddyManagementMode><AutopostCrashDumps>true</AutopostCrashDumps><AccountManagementServer /><AppToken /><ApplicationOverride /><EnablePresencePersistence>false</EnablePresencePersistence><AccountHandle>A1</AccountHandle><AcctName>.2bb7791a.</AcctName><AccessToken>e30.eyJpc3MiOiJwYWxhZGlucy1nc2MiLCJleHAiOjE2ODg4NTY3NjYsInZ4YSI6ImxvZ2luIiwidnhpIjo0NTE1NTAxLCJmIjoic2lwOi4yYmI3NzkxYS5AaHJwcC52aXZveC5jb20ifQ.dKx_mYsJl9K3w_rENJw_Cv4OAxCNY75ndWwA7TBVX_8</AccessToken></Request></InputXml></Response>
+[0071.67] VoiceChat: Info  VivoxApi::CommandHandler::PostEvent(829) - this=0x1a657351fe0,ToXml(p, true)=<Event type="AccountLoginStateChangeEvent"><AccountHandle>A1</AccountHandle><StatusCode>200</StatusCode><StatusString>OK</StatusString><State>1</State><RequestId>A1</RequestId></Event>
+[0071.67] Log: [!!!] Clearing the precache manifest.
+[0071.67] Log: All Windows Closed
+[0071.67] Log: appRequestExit(0)(0)
+[0071.67] Log: TgAIBehaviorTreeManager :: De-allocating 201 behavior trees
+[0071.90] Log: Flushing async loaders. MinPriority=ALP_None
+[0071.91] TgSLO: Finish Load: ANNOUNCERPACKASSETS_SF
+[0071.91] Log: Flushed async loaders.
+[0072.57] Exit: Preparing to exit.
+[0073.15] Log: Encountered a UIComponent (Default__UIComponent_HealthBar) with no valid owner found (or it has itself set as it's parent)!!!! Returning NULL to prevent recursive calls.
+[0073.15] Log: Encountered a UIComponent (Default__UIComponent_HealthBar_Overlay) with no valid owner found (or it has itself set as it's parent)!!!! Returning NULL to prevent recursive calls.
+[0073.15] Log: Encountered a UIComponent (Default__UIComponent_HealthBar_Overlay_Deployable) with no valid owner found (or it has itself set as it's parent)!!!! Returning NULL to prevent recursive calls.
+[0073.15] Log: Encountered a UIComponent (Default__UIComponent_HealthBar_Overlay_Player) with no valid owner found (or it has itself set as it's parent)!!!! Returning NULL to prevent recursive calls.
+[0073.15] Log: Encountered a UIComponent (Default__UIComponent_HealthBar_Player) with no valid owner found (or it has itself set as it's parent)!!!! Returning NULL to prevent recursive calls.
+[0073.31] Exit: Game engine shut down
+[0073.82] Exit: Windows client shut down
+[0073.83] Exit: XAudio2 Device shut down.
+[0073.84] Exit: AK Audio shut down.
+[0073.85] Exit: PComNetDriver_1(PEER) shut down
+[0074.34] Exit: Object subsystem successfully closed.
+[0074.35] VoiceChat: Player Logoff so disconnecting
+[0074.43] VoiceChat: Info  VivoxApi::CommandHandler::ProcessRequest(645) - this=0x1a657351fe0,ToXml(request, true)=<Request requestId="" action="Connector.InitiateShutdown.1"><ConnectorHandle>C0</ConnectorHandle></Request>
+[0074.43] VoiceChat: Info  VivoxApi::CommandHandler::PassCommand(812) - this=0x1a657351fe0,ToXml(&command->GetResp().base, true)=<Response requestId="" action="Connector.InitiateShutdown.1"><ReturnCode>0</ReturnCode><Results><StatusCode>0</StatusCode><StatusString /></Results><InputXml><Request requestId="" action="Connector.InitiateShutdown.1"><ConnectorHandle>C0</ConnectorHandle></Request></InputXml></Response>
+[0074.43] Log: Initiating FlushEventsAndShutdown
+[0074.43] Log: [RallyHereEvent] Shutting down event client
+[0074.43] Log: [RallyHereEvent] FRH_EventClient::Shutting down thread.
+[0074.43] Log: [RallyHereEvent] FRH_EventClient::Stop called.
+[0074.60] Log: [RallyHereEvent] FRH_EventClient::Exit called.
+[0074.60] Log: FlushEventsAndShutdown Time: 0.164868 seconds
+[0074.83] Log: RENDERTHREADDEBUG - Calling Stop Rendering Thread

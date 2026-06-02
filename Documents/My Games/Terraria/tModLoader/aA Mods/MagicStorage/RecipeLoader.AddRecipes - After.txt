@@ -1,0 +1,83 @@
+[03ene.2025 - 21:39:49]
+// ILCursor: Terraria.ModLoader.RecipeLoader::AddRecipes
+
+// Arguments:
+    none
+
+// Locals:
+     [0] System.Reflection.MethodInfo V_0
+     [1] Terraria.ModLoader.Mod[] V_1
+     [2] System.Int32 V_2
+     [3] Terraria.ModLoader.Mod V_3
+
+// Body:
+IL_00000: ldtoken      Terraria.ModLoader.Mod
+IL_00005: call         System.Type System.Type::GetTypeFromHandle(System.RuntimeTypeHandle)
+IL_0000A: ldstr        AddRecipes
+IL_0000F: ldc.i4.s     20
+IL_00011: call         System.Reflection.MethodInfo System.Type::GetMethod(System.String,System.Reflection.BindingFlags)
+IL_00016: stloc.0      
+IL_00017: call         Terraria.ModLoader.Mod[] Terraria.ModLoader.ModLoader::get_Mods()
+IL_0001C: stloc.1      
+IL_0001D: ldc.i4.0     
+IL_0001E: stloc.2      
+IL_0001F: br           IL_000C2
+IL_00024: ldloc.1      
+IL_00025: ldloc.2      
+IL_00026: ldelem.ref   
+IL_00027: stloc.3      
+IL_00028: ldloc.3      
+IL_00029: call         System.Void Terraria.ModLoader.RecipeLoader::set_CurrentMod(Terraria.ModLoader.Mod)
+IL_0002E: ldloc.0      
+IL_0002F: ldloc.3      
+IL_00030: call         T[] System.Array::Empty<System.Object>()
+IL_00035: callvirt     System.Object System.Reflection.MethodBase::Invoke(System.Object,System.Object[])
+IL_0003A: pop          
+IL_0003B: ldloc.3      
+IL_0003C: call         System.Void Terraria.ModLoader.SystemLoader::AddRecipes(Terraria.ModLoader.Mod)
+IL_00041: ldloc.3      
+IL_00042: callvirt     System.Collections.Generic.IEnumerable`1<T> Terraria.ModLoader.Mod::GetContent<Terraria.ModLoader.ModItem>()
+IL_00047: ldsfld       System.Action`1<Terraria.ModLoader.ModItem> Terraria.ModLoader.RecipeLoader/<>c::<>9__8_0
+IL_0004C: dup          
+IL_0004D: brtrue.s     IL_00066
+IL_0004F: pop          
+IL_00050: ldsfld       Terraria.ModLoader.RecipeLoader/<>c Terraria.ModLoader.RecipeLoader/<>c::<>9
+IL_00055: ldftn        System.Void Terraria.ModLoader.RecipeLoader/<>c::<AddRecipes>b__8_0(Terraria.ModLoader.ModItem)
+IL_0005B: newobj       System.Void System.Action`1<Terraria.ModLoader.ModItem>::.ctor(System.Object,System.IntPtr)
+IL_00060: dup          
+IL_00061: stsfld       System.Action`1<Terraria.ModLoader.ModItem> Terraria.ModLoader.RecipeLoader/<>c::<>9__8_0
+IL_00066: call         System.Void Terraria.ModLoader.Core.LoaderUtils::ForEachAndAggregateExceptions<Terraria.ModLoader.ModItem>(System.Collections.Generic.IEnumerable`1<T>,System.Action`1<T>)
+IL_0006B: ldloc.3      
+IL_0006C: callvirt     System.Collections.Generic.IEnumerable`1<T> Terraria.ModLoader.Mod::GetContent<Terraria.ModLoader.GlobalItem>()
+IL_00071: ldsfld       System.Action`1<Terraria.ModLoader.GlobalItem> Terraria.ModLoader.RecipeLoader/<>c::<>9__8_1
+IL_00076: dup          
+IL_00077: brtrue.s     IL_00090
+IL_00079: pop          
+IL_0007A: ldsfld       Terraria.ModLoader.RecipeLoader/<>c Terraria.ModLoader.RecipeLoader/<>c::<>9
+IL_0007F: ldftn        System.Void Terraria.ModLoader.RecipeLoader/<>c::<AddRecipes>b__8_1(Terraria.ModLoader.GlobalItem)
+IL_00085: newobj       System.Void System.Action`1<Terraria.ModLoader.GlobalItem>::.ctor(System.Object,System.IntPtr)
+IL_0008A: dup          
+IL_0008B: stsfld       System.Action`1<Terraria.ModLoader.GlobalItem> Terraria.ModLoader.RecipeLoader/<>c::<>9__8_1
+IL_00090: call         System.Void Terraria.ModLoader.Core.LoaderUtils::ForEachAndAggregateExceptions<Terraria.ModLoader.GlobalItem>(System.Collections.Generic.IEnumerable`1<T>,System.Action`1<T>)
+IL_00095: ldloc        V_3
+IL_00099: call         System.Void MagicStorage.Edits.RecipeCheckingILEdit::CheckRecipes(Terraria.ModLoader.Mod)
+IL_0009E: leave.s      IL_000BE
+IL_000A0: callvirt     System.Collections.IDictionary System.Exception::get_Data()
+IL_000A5: ldstr        mod
+IL_000AA: ldloc.3      
+IL_000AB: callvirt     System.String Terraria.ModLoader.Mod::get_Name()
+IL_000B0: callvirt     System.Void System.Collections.IDictionary::set_Item(System.Object,System.Object)
+IL_000B5: rethrow      
+IL_000B7: ldnull       
+IL_000B8: call         System.Void Terraria.ModLoader.RecipeLoader::set_CurrentMod(Terraria.ModLoader.Mod)
+IL_000BD: endfinally   
+IL_000BE: ldloc.2      
+IL_000BF: ldc.i4.1     
+IL_000C0: add          
+IL_000C1: stloc.2      
+IL_000C2: ldloc.2      
+IL_000C3: ldloc.1      
+IL_000C4: ldlen        
+IL_000C5: conv.i4      
+IL_000C6: blt          IL_00024
+IL_000CB: ret          

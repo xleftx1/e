@@ -1,0 +1,80 @@
+[2024-04-24 20:36:47.898] [DISPLAY] [Main ] [main] Working directory: C:\Program Files\Rockstar Games\Launcher
+[2024-04-24 20:36:47.928] [DISPLAY] [Main ] [minmode] Running in Steam mode
+[2024-04-24 20:36:47.928] [DISPLAY] [Main ] [minmode] Steam App Id: 271590
+[2024-04-24 20:36:47.928] [DISPLAY] [Main ] [minmode] Title Id: 
+[2024-04-24 20:36:47.928] [DISPLAY] [Main ] [minmode] Location: D:\SteamLibrary\steamapps\common\Grand Theft Auto V
+[2024-04-24 20:36:47.930] [DISPLAY] [Main ] [launcher] Opening log file.
+[2024-04-24 20:36:47.937] [DISPLAY] [Main ] [main] Command line: "C:\Program Files\Rockstar Games\Launcher\Launcher.exe" -skipPatcherCheck -steamAppId=271590 -steamLocation "D:\SteamLibrary\steamapps\common\Grand Theft Auto V" @args.txt
+[2024-04-24 20:36:47.937] [DISPLAY] [Main ] [main] P4 Version: 
+[2024-04-24 20:36:47.937] [DISPLAY] [Main ] [main] RGL Branch: release_03
+[2024-04-24 20:36:47.941] [DISPLAY] [Main ] [main] Version: 1.0.88.1929
+[2024-04-24 20:36:47.941] [DISPLAY] [Main ] [main] Parameters:
+[2024-04-24 20:36:47.941] [DISPLAY] [Main ] [main]     C:\Program Files\Rockstar Games\Launcher\Launcher.exe
+[2024-04-24 20:36:47.941] [DISPLAY] [Main ] [main]     -skipPatcherCheck
+[2024-04-24 20:36:47.941] [DISPLAY] [Main ] [main]     -steamAppId=271590
+[2024-04-24 20:36:47.941] [DISPLAY] [Main ] [main]     -steamLocation
+[2024-04-24 20:36:47.941] [DISPLAY] [Main ] [main]     D:\SteamLibrary\steamapps\common\Grand Theft Auto V
+[2024-04-24 20:36:47.941] [DISPLAY] [Main ] [main]     @args.txt
+[2024-04-24 20:36:47.964] [DISPLAY] [Main ] [titlemanager] Installed titles:
+[2024-04-24 20:36:47.964] [DISPLAY] [Main ] [titlemanager]  Title                             Progress               Version              Location                                                    
+[2024-04-24 20:36:47.985] [DISPLAY] [Main ] [svc] Service version: 1.0.88.1929 (1.0.88.1929)
+[2024-04-24 20:36:48.249] [DISPLAY] [Main ] [fileutils] Version: 2.3.0.7 | 1.0.88.1929 | FFP
+[2024-04-24 20:36:48.284] [DISPLAY] [Workr] [selfupdate] Self-update not ready to apply yet.
+[2024-04-24 20:36:48.986] [DISPLAY] [bgsvc] [svc] Received response from service.
+[2024-04-24 20:36:49.415] [DISPLAY] [Main ] [systemtray] System tray: enabled
+[2024-04-24 20:36:49.440] [DISPLAY] [Main ] [launcher] Passed check: majorVersion(10.0.19045) >= 10
+[2024-04-24 20:36:49.476] [DISPLAY] [Workr] [idownloader] Starting download of 'https://gamedownloads-rockstargames-com.akamaized.net/public/launcher_online_config.xml'
+[2024-04-24 20:36:49.712] [DISPLAY] [Workr] [idownloader] Completed download of 'https://gamedownloads-rockstargames-com.akamaized.net/public/launcher_online_config.xml' (status: 0/200)
+[2024-04-24 20:36:49.713] [DISPLAY] [Workr] [titlemanager] Downloading title list...
+[2024-04-24 20:36:49.713] [DISPLAY] [Workr] [titlemanager] Downloading default title list (SCS)...
+[2024-04-24 20:36:49.713] [DISPLAY] [Workr] [idownloader] Starting download of 'https://rgl-prod.ros.rockstargames.com/launcher/11/LauncherServices/App.asmx/GetDefaultApps?accessToken='
+[2024-04-24 20:36:50.527] [DISPLAY] [Workr] [idownloader] Completed download of 'https://rgl-prod.ros.rockstargames.com/launcher/11/LauncherServices/App.asmx/GetDefaultApps?accessToken=' (status: 0/200)
+[2024-04-24 20:36:50.528] [DISPLAY] [Workr] [titlemanager] Title list updated.
+[2024-04-24 20:36:50.528] [DISPLAY] [Workr] [launcher] Checking for self-update...
+[2024-04-24 20:36:50.539] [DISPLAY] [Workr] [idownloader] Starting download of 'https://rgl-prod.ros.rockstargames.com/launcher/11/LauncherServices/App.asmx/GetBuildManifestFullNoAuth?branchAccessToken=BRANCHACCESS token="cdRn4f+rdAUq3NKi2JMKFe8EZnlS/COfo8Nmt5+IOxQY9aaRVTsWlCe4zBPZBA5E1rfrdrOqHnRQ1QpSeqSx+A==",signature="zCdl4OYjFO7+ofpI7NAFemPc81ySvfhK8Tblhxtq8AA="'
+[2024-04-24 20:36:51.523] [DISPLAY] [Workr] [idownloader] Completed download of 'https://rgl-prod.ros.rockstargames.com/launcher/11/LauncherServices/App.asmx/GetBuildManifestFullNoAuth?branchAccessToken=BRANCHACCESS token="cdRn4f+rdAUq3NKi2JMKFe8EZnlS/COfo8Nmt5+IOxQY9aaRVTsWlCe4zBPZBA5E1rfrdrOqHnRQ1QpSeqSx+A==",signature="zCdl4OYjFO7+ofpI7NAFemPc81ySvfhK8Tblhxtq8AA="' (status: 0/200)
+[2024-04-24 20:36:51.527] [DISPLAY] [Workr] [statuschecker] Title Rockstar Games Launcher: 85.56 MB / 356.78 MB
+[2024-04-24 20:36:51.527] [DISPLAY] [Workr] [selfupdate] Updating launcher...
+[2024-04-24 20:36:53.467] [DISPLAY] [Admin] [idownloader] Starting download of 'https://rgl-prod.ros.rockstargames.com/launcher/11/LauncherServices/App.asmx/RetrieveFileChunkNoAuthMulti'
+[2024-04-24 20:36:54.224] [DISPLAY] [Admin] [idownloader] Completed download of 'https://rgl-prod.ros.rockstargames.com/launcher/11/LauncherServices/App.asmx/RetrieveFileChunkNoAuthMulti' (status: 0/200)
+[2024-04-24 20:36:56.390] [WARNING] [bgsvc] [chunkreceiver] Range failed to write to disk! C:\Program Files\Rockstar Games\Launcher\Redistributables\SocialClub\Social-Club-Setup.exe.swap, offset 136314880 length 10485760 chunk 30574
+[2024-04-24 20:36:56.390] [WARNING] [bgsvc] [chunkreceiver] Chunk 30574 (transaction 21) failed to write
+[2024-04-24 20:36:56.392] [WARNING] [bgsvc] [chunkreceiver] Range failed to write to disk! C:\Program Files\Rockstar Games\Launcher\Redistributables\SocialClub\Social-Club-Setup.exe.swap, offset 20971520 length 10485760 chunk 30573
+[2024-04-24 20:36:56.392] [WARNING] [bgsvc] [chunkreceiver] Chunk 30573 (transaction 20) failed to write
+[2024-04-24 20:36:56.392] [WARNING] [Workr] [chunkeddownloader] 2 chunk(s) failed to write.  There are now 0 errored chunks.
+[2024-04-24 20:36:56.732] [WARNING] [Workr] [chunkeddownloader] Removing errored chunk 30574 (Social-Club-Setup.exe.swap 104857600). There are now 1 errored chunks.
+[2024-04-24 20:36:58.874] [WARNING] [Workr] [chunkeddownloader] Removing errored chunk 30573 (Social-Club-Setup.exe.swap 0). There are now 2 errored chunks.
+[2024-04-24 20:37:01.883] [DISPLAY] [Workr] [chunkeddownloader] Attempting to retry chunks that failed to download (1 / 5, 147.58 MB)...
+[2024-04-24 20:37:05.097] [DISPLAY] [Workr] [downloadprogress] Dl: D|258350952|11|6|0|0
+[2024-04-24 20:37:05.129] [ ERROR ] [Workr] [titleupdater] Update of Rockstar Games Launcher failed.
+[2024-04-24 20:37:05.380] [ ERROR ] [Workr] [error] ************************************************************************
+[2024-04-24 20:37:05.380] [ ERROR ] [Workr] [error] * Setting error condition
+[2024-04-24 20:37:05.380] [ ERROR ] [Workr] [error] * Category:  1   (ERROR_CATEGORY_LAUNCHER)
+[2024-04-24 20:37:05.380] [ ERROR ] [Workr] [error] * Code:      129 (0x81)
+[2024-04-24 20:37:05.380] [ ERROR ] [Workr] [error] * Extra:     unknown
+[2024-04-24 20:37:05.380] [ ERROR ] [Workr] [error] * Localised: Error al actualizar Rockstar Games Launcher (code unknown). Si continúas viendo este mensaje, contacta al servicio de soporte al cliente de Rockstar Games en https://support.rockstargames.com/mx/.
+[2024-04-24 20:37:05.380] [ ERROR ] [Workr] [error] ************************************************************************
+[2024-04-24 20:37:05.380] [ ERROR ] [Workr] [launcher] Displaying error message: Error al actualizar Rockstar Games Launcher (code unknown). Si continúas viendo este mensaje, contacta al servicio de soporte al cliente de Rockstar Games en https://support.rockstargames.com/mx/.
+[2024-04-24 20:37:14.632] [DISPLAY] [Workr] [launcher] No self-update, continuing.
+[2024-04-24 20:37:14.632] [DISPLAY] [Workr] [launcher] Checking for prerequisite updates...
+[2024-04-24 20:37:14.636] [DISPLAY] [Workr] [fileutils] Unable to get file version info size for C:\Program Files\Rockstar Games\Launcher\Redistributables\SocialClub\Social-Club-Setup.exe
+[2024-04-24 20:37:14.636] [ ERROR ] [Workr] [sctitle] Unable to get Social Club installer version from C:\Program Files\Rockstar Games\Launcher\Redistributables\SocialClub\Social-Club-Setup.exe
+[2024-04-24 20:37:14.636] [DISPLAY] [Workr] [titleupdater] Installing prerequisites for title launcher
+[2024-04-24 20:37:14.637] [WARNING] [Workr] [preqmanager] Prerequisite not found: C:\Program Files\Rockstar Games\Launcher\Redistributables\SocialClub\Social-Club-Setup.exe
+[2024-04-24 20:37:14.738] [ ERROR ] [Workr] [launcher] Unable to install prerequisites!
+[2024-04-24 20:37:14.738] [DISPLAY] [Workr] [launcher] Checking minimum SDK requirement
+[2024-04-24 20:37:14.827] [DISPLAY] [Workr] [launcher] Completed Social Club Pre-initialization tasks
+[2024-04-24 20:37:18.631] [DISPLAY] [Main ] [launcher] Social Club UI has started.
+[2024-04-24 20:37:18.634] [DISPLAY] [Main ] [external] Notifying Social Club UI about external launch...
+[2024-04-24 20:37:18.634] [DISPLAY] [Admin] [external] Setting up Steam title...
+[2024-04-24 20:37:18.634] [DISPLAY] [Admin] [metadatamanager] Read external Steam metadata: gta5
+[2024-04-24 20:37:18.635] [DISPLAY] [Admin] [external] Ready to attempt a launch.
+[2024-04-24 20:37:21.450] [DISPLAY] [Main ] [launcher] Time to start up: 33582 ms
+[2024-04-24 20:37:21.459] [DISPLAY] [Main ] [ui_mainwindow] Using DPI 96,96
+[2024-04-24 20:37:21.460] [DISPLAY] [Main ] [ui_mainwindow] Using UI Scale: 1.00
+[2024-04-24 20:37:21.461] [DISPLAY] [Main ] [ui_mainwindow] Using saved geometry: 160,130 (1280 x 600)
+[2024-04-24 20:37:21.522] [DISPLAY] [Main ] [systemtray] System tray: enabled
+[2024-04-24 20:40:50.849] [DISPLAY] [Main ] [launcher] Shutdown requested! Forced: false
+[2024-04-24 20:40:50.850] [DISPLAY] [Main ] [launcher] StartShutdown - Now in progress
+[2024-04-24 20:40:51.069] [DISPLAY] [Main ] [app] Application quit requested (exit code: 0)
+[2024-04-24 20:40:51.120] [DISPLAY] [Main ] [svc] Stopping the background service.

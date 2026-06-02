@@ -1,0 +1,199 @@
+[03ene.2025 - 21:39:49]
+// ILCursor: Terraria.Main::DoUpdate_HandleChat
+
+// Arguments:
+    none
+
+// Locals:
+     [0] System.Int32 V_0
+     [1] System.String V_1
+     [2] System.Int32 V_2
+     [3] System.Boolean V_3
+     [4] System.Single V_4
+     [5] System.Int32 V_5
+     [6] Terraria.Chat.ChatMessage V_6
+
+// Body:
+IL_00000: ldsfld       System.Object Terraria.Main::CurrentInputTextTakerOverride
+IL_00005: brfalse.s    IL_0000E
+IL_00007: ldc.i4.0     
+IL_00008: stsfld       System.Boolean Terraria.Main::drawingPlayerChat
+IL_0000D: ret          
+IL_0000E: ldsfld       System.Boolean Terraria.Main::editSign
+IL_00013: brfalse.s    IL_0001B
+IL_00015: ldc.i4.0     
+IL_00016: stsfld       System.Boolean Terraria.Main::drawingPlayerChat
+IL_0001B: call         System.Boolean Terraria.GameInput.PlayerInput::get_UsingGamepad()
+IL_00020: brfalse.s    IL_00028
+IL_00022: ldc.i4.0     
+IL_00023: stsfld       System.Boolean Terraria.Main::drawingPlayerChat
+IL_00028: ldsfld       System.Boolean Terraria.Main::drawingPlayerChat
+IL_0002D: brtrue.s     IL_0003A
+IL_0002F: ldsfld       Terraria.GameContent.UI.Chat.IChatMonitor Terraria.Main::chatMonitor
+IL_00034: callvirt     System.Void Terraria.GameContent.UI.Chat.IChatMonitor::ResetOffset()
+IL_00039: ret          
+IL_0003A: ldc.i4.0     
+IL_0003B: stloc.0      
+IL_0003C: ldsflda      Microsoft.Xna.Framework.Input.KeyboardState Terraria.Main::keyState
+IL_00041: ldc.i4.s     38
+IL_00043: call         System.Boolean Microsoft.Xna.Framework.Input.KeyboardState::IsKeyDown(Microsoft.Xna.Framework.Input.Keys)
+IL_00048: brfalse.s    IL_0004E
+IL_0004A: ldc.i4.1     
+IL_0004B: stloc.0      
+IL_0004C: br.s         IL_0005E
+IL_0004E: ldsflda      Microsoft.Xna.Framework.Input.KeyboardState Terraria.Main::keyState
+IL_00053: ldc.i4.s     40
+IL_00055: call         System.Boolean Microsoft.Xna.Framework.Input.KeyboardState::IsKeyDown(Microsoft.Xna.Framework.Input.Keys)
+IL_0005A: brfalse.s    IL_0005E
+IL_0005C: ldc.i4.m1    
+IL_0005D: stloc.0      
+IL_0005E: ldsfld       Terraria.GameContent.UI.Chat.IChatMonitor Terraria.Main::chatMonitor
+IL_00063: ldloc.0      
+IL_00064: callvirt     System.Void Terraria.GameContent.UI.Chat.IChatMonitor::Offset(System.Int32)
+IL_00069: ldsflda      Microsoft.Xna.Framework.Input.KeyboardState Terraria.Main::keyState
+IL_0006E: ldc.i4.s     27
+IL_00070: call         System.Boolean Microsoft.Xna.Framework.Input.KeyboardState::IsKeyDown(Microsoft.Xna.Framework.Input.Keys)
+IL_00075: brfalse.s    IL_0007D
+IL_00077: ldc.i4.0     
+IL_00078: stsfld       System.Boolean Terraria.Main::drawingPlayerChat
+IL_0007D: ldsfld       System.String Terraria.Main::chatText
+IL_00082: stloc.1      
+IL_00083: ldsfld       System.String Terraria.Main::chatText
+IL_00088: ldc.i4.0     
+IL_00089: call         System.String Terraria.Main::GetInputText(System.String,System.Boolean)
+IL_0008E: stsfld       System.String Terraria.Main::chatText
+IL_00093: ldc.i4       470
+IL_00098: stloc.2      
+IL_00099: ldsfld       System.Int32 Terraria.Main::screenWidth
+IL_0009E: conv.r4      
+IL_0009F: ldc.r4       1
+IL_000A4: call         System.Single Terraria.Main::get_UIScale()
+IL_000A9: div          
+IL_000AA: mul          
+IL_000AB: conv.i4      
+IL_000AC: ldc.i4       330
+IL_000B1: sub          
+IL_000B2: stloc.2      
+IL_000B3: ldloc.1      
+IL_000B4: ldsfld       System.String Terraria.Main::chatText
+IL_000B9: call         System.Boolean System.String::op_Inequality(System.String,System.String)
+IL_000BE: brfalse      IL_00145
+IL_000C3: ldsfld       ReLogic.Content.Asset`1<ReLogic.Graphics.DynamicSpriteFont> Terraria.GameContent.FontAssets::MouseText
+IL_000C8: callvirt     T ReLogic.Content.Asset`1<ReLogic.Graphics.DynamicSpriteFont>::get_Value()
+IL_000CD: ldsfld       System.String Terraria.Main::chatText
+IL_000D2: call         Microsoft.Xna.Framework.Vector2 Microsoft.Xna.Framework.Vector2::get_One()
+IL_000D7: ldc.r4       -1
+IL_000DC: call         Microsoft.Xna.Framework.Vector2 Terraria.UI.Chat.ChatManager::GetStringSize(ReLogic.Graphics.DynamicSpriteFont,System.String,Microsoft.Xna.Framework.Vector2,System.Single)
+IL_000E1: ldfld        System.Single Microsoft.Xna.Framework.Vector2::X
+IL_000E6: stloc.s      V_4
+IL_000E8: br.s         IL_0013F
+IL_000EA: ldc.i4.0     
+IL_000EB: ldloc.s      V_4
+IL_000ED: ldloc.2      
+IL_000EE: conv.r4      
+IL_000EF: sub          
+IL_000F0: conv.i4      
+IL_000F1: ldc.i4.s     100
+IL_000F3: div          
+IL_000F4: call         System.Int32 System.Math::Max(System.Int32,System.Int32)
+IL_000F9: stloc.s      V_5
+IL_000FB: ldsfld       System.String Terraria.Main::chatText
+IL_00100: ldc.i4.0     
+IL_00101: ldsfld       System.String Terraria.Main::chatText
+IL_00106: callvirt     System.Int32 System.String::get_Length()
+IL_0010B: ldc.i4.1     
+IL_0010C: sub          
+IL_0010D: ldloc.s      V_5
+IL_0010F: sub          
+IL_00110: callvirt     System.String System.String::Substring(System.Int32,System.Int32)
+IL_00115: stsfld       System.String Terraria.Main::chatText
+IL_0011A: ldsfld       ReLogic.Content.Asset`1<ReLogic.Graphics.DynamicSpriteFont> Terraria.GameContent.FontAssets::MouseText
+IL_0011F: callvirt     T ReLogic.Content.Asset`1<ReLogic.Graphics.DynamicSpriteFont>::get_Value()
+IL_00124: ldsfld       System.String Terraria.Main::chatText
+IL_00129: call         Microsoft.Xna.Framework.Vector2 Microsoft.Xna.Framework.Vector2::get_One()
+IL_0012E: ldc.r4       -1
+IL_00133: call         Microsoft.Xna.Framework.Vector2 Terraria.UI.Chat.ChatManager::GetStringSize(ReLogic.Graphics.DynamicSpriteFont,System.String,Microsoft.Xna.Framework.Vector2,System.Single)
+IL_00138: ldfld        System.Single Microsoft.Xna.Framework.Vector2::X
+IL_0013D: stloc.s      V_4
+IL_0013F: ldloc.s      V_4
+IL_00141: ldloc.2      
+IL_00142: conv.r4      
+IL_00143: bgt.s        IL_000EA
+IL_00145: ldloc.1      
+IL_00146: ldsfld       System.String Terraria.Main::chatText
+IL_0014B: call         System.Boolean System.String::op_Inequality(System.String,System.String)
+IL_00150: brfalse.s    IL_00167
+IL_00152: ldc.i4.s     12
+IL_00154: ldc.i4.m1    
+IL_00155: ldc.i4.m1    
+IL_00156: ldc.i4.1     
+IL_00157: ldc.r4       1
+IL_0015C: ldc.r4       0
+IL_00161: call         Microsoft.Xna.Framework.Audio.SoundEffectInstance Terraria.Audio.SoundEngine::PlaySound(System.Int32,System.Int32,System.Int32,System.Int32,System.Single,System.Single)
+IL_00166: pop          
+IL_00167: ldsfld       System.Boolean Terraria.Main::inputTextEnter
+IL_0016C: brfalse.s    IL_00175
+IL_0016E: ldsfld       System.Boolean Terraria.Main::chatRelease
+IL_00173: brtrue.s     IL_00176
+IL_00175: ret          
+IL_00176: ldc.i4       714
+IL_0017B: ldc.i4       61270417
+IL_00180: call         T MonoMod.Utils.DynamicReferenceManager::GetValueTUnsafe<System.Func`1<System.Boolean>>(System.Int32,System.Int32)
+IL_00185: callvirt     TResult System.Func`1<System.Boolean>::Invoke()
+IL_0018A: brfalse      IL_001A4
+IL_0018F: ldc.i4       715
+IL_00194: ldc.i4       52146807
+IL_00199: call         T MonoMod.Utils.DynamicReferenceManager::GetValueTUnsafe<System.Action>(System.Int32,System.Int32)
+IL_0019E: callvirt     System.Void System.Action::Invoke()
+IL_001A3: ret          
+IL_001A4: ldsfld       System.String Terraria.Main::chatText
+IL_001A9: callvirt     System.Int32 System.String::get_Length()
+IL_001AE: ldc.i4.0     
+IL_001AF: ble.s        IL_001D1
+IL_001B1: ldsfld       System.String Terraria.Main::chatText
+IL_001B6: ldc.i4.0     
+IL_001B7: callvirt     System.Char System.String::get_Chars(System.Int32)
+IL_001BC: ldc.i4.s     47
+IL_001BE: bne.un.s     IL_001D1
+IL_001C0: ldsfld       System.String Terraria.Main::chatText
+IL_001C5: newobj       System.Void Terraria.ModLoader.ChatCommandCaller::.ctor()
+IL_001CA: call         System.Boolean Terraria.ModLoader.CommandLoader::HandleCommand(System.String,Terraria.ModLoader.CommandCaller)
+IL_001CF: br.s         IL_001D2
+IL_001D1: ldc.i4.0     
+IL_001D2: stloc.3      
+IL_001D3: ldsfld       System.String Terraria.Main::chatText
+IL_001D8: ldstr        
+IL_001DD: call         System.Boolean System.String::op_Inequality(System.String,System.String)
+IL_001E2: brfalse.s    IL_00221
+IL_001E4: ldloc.3      
+IL_001E5: brtrue.s     IL_00221
+IL_001E7: ldsfld       Terraria.Chat.ChatCommandProcessor Terraria.UI.Chat.ChatManager::Commands
+IL_001EC: ldsfld       System.String Terraria.Main::chatText
+IL_001F1: callvirt     Terraria.Chat.ChatMessage Terraria.Chat.ChatCommandProcessor::CreateOutgoingMessage(System.String)
+IL_001F6: stloc.s      V_6
+IL_001F8: ldsfld       System.Int32 Terraria.Main::netMode
+IL_001FD: ldc.i4.1     
+IL_001FE: bne.un.s     IL_00209
+IL_00200: ldloc.s      V_6
+IL_00202: call         System.Void Terraria.Chat.ChatHelper::SendChatMessageFromClient(Terraria.Chat.ChatMessage)
+IL_00207: br.s         IL_00221
+IL_00209: ldsfld       System.Int32 Terraria.Main::netMode
+IL_0020E: brtrue.s     IL_00221
+IL_00210: ldsfld       Terraria.Chat.ChatCommandProcessor Terraria.UI.Chat.ChatManager::Commands
+IL_00215: ldloc.s      V_6
+IL_00217: ldsfld       System.Int32 Terraria.Main::myPlayer
+IL_0021C: callvirt     System.Void Terraria.Chat.ChatCommandProcessor::ProcessIncomingMessage(Terraria.Chat.ChatMessage,System.Int32)
+IL_00221: ldstr        
+IL_00226: stsfld       System.String Terraria.Main::chatText
+IL_0022B: call         System.Void Terraria.Main::ClosePlayerChat()
+IL_00230: ldc.i4.0     
+IL_00231: stsfld       System.Boolean Terraria.Main::chatRelease
+IL_00236: ldc.i4.s     11
+IL_00238: ldc.i4.m1    
+IL_00239: ldc.i4.m1    
+IL_0023A: ldc.i4.1     
+IL_0023B: ldc.r4       1
+IL_00240: ldc.r4       0
+IL_00245: call         Microsoft.Xna.Framework.Audio.SoundEffectInstance Terraria.Audio.SoundEngine::PlaySound(System.Int32,System.Int32,System.Int32,System.Int32,System.Single,System.Single)
+IL_0024A: pop          
+IL_0024B: ret          

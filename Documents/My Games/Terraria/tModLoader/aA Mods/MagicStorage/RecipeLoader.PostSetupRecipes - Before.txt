@@ -1,0 +1,45 @@
+[03ene.2025 - 21:39:49]
+// ILCursor: Terraria.ModLoader.RecipeLoader::PostSetupRecipes
+
+// Arguments:
+    none
+
+// Locals:
+     [0] Terraria.ModLoader.Mod[] V_0
+     [1] System.Int32 V_1
+     [2] Terraria.ModLoader.Mod V_2
+
+// Body:
+IL_00000: call         Terraria.ModLoader.Mod[] Terraria.ModLoader.ModLoader::get_Mods()
+IL_00005: stloc.0      
+IL_00006: ldc.i4.0     
+IL_00007: stloc.1      
+IL_00008: br.s         IL_0003E
+IL_0000A: ldloc.0      
+IL_0000B: ldloc.1      
+IL_0000C: ldelem.ref   
+IL_0000D: stloc.2      
+IL_0000E: ldloc.2      
+IL_0000F: call         System.Void Terraria.ModLoader.RecipeLoader::set_CurrentMod(Terraria.ModLoader.Mod)
+IL_00014: ldloc.2      
+IL_00015: call         System.Void Terraria.ModLoader.SystemLoader::PostSetupRecipes(Terraria.ModLoader.Mod)
+IL_0001A: leave.s      IL_0003A
+IL_0001C: callvirt     System.Collections.IDictionary System.Exception::get_Data()
+IL_00021: ldstr        mod
+IL_00026: ldloc.2      
+IL_00027: callvirt     System.String Terraria.ModLoader.Mod::get_Name()
+IL_0002C: callvirt     System.Void System.Collections.IDictionary::set_Item(System.Object,System.Object)
+IL_00031: rethrow      
+IL_00033: ldnull       
+IL_00034: call         System.Void Terraria.ModLoader.RecipeLoader::set_CurrentMod(Terraria.ModLoader.Mod)
+IL_00039: endfinally   
+IL_0003A: ldloc.1      
+IL_0003B: ldc.i4.1     
+IL_0003C: add          
+IL_0003D: stloc.1      
+IL_0003E: ldloc.1      
+IL_0003F: ldloc.0      
+IL_00040: ldlen        
+IL_00041: conv.i4      
+IL_00042: blt.s        IL_0000A
+IL_00044: ret          

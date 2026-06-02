@@ -1,0 +1,105 @@
+[03ene.2025 - 21:39:49]
+// ILCursor: Terraria.Chest::ServerPlaceItem
+
+// Arguments:
+     [0] System.Int32 plr
+     [1] System.Int32 slot
+
+// Locals:
+     [0] System.Int32 V_0
+
+// Body:
+IL_00000: ldarg.1      
+IL_00001: ldsfld       System.Int32 Terraria.ID.PlayerItemSlotID::Bank4_0
+IL_00006: blt.s        IL_00080
+IL_00008: ldarg.1      
+IL_00009: ldsfld       System.Int32 Terraria.ID.PlayerItemSlotID::Bank4_0
+IL_0000E: ldc.i4.s     40
+IL_00010: add          
+IL_00011: bge.s        IL_00080
+IL_00013: ldarg.1      
+IL_00014: ldsfld       System.Int32 Terraria.ID.PlayerItemSlotID::Bank4_0
+IL_00019: sub          
+IL_0001A: stloc.0      
+IL_0001B: ldsfld       Terraria.Player[] Terraria.Main::player
+IL_00020: ldarg.0      
+IL_00021: ldelem.ref   
+IL_00022: ldfld        Terraria.Chest Terraria.Player::bank4
+IL_00027: ldfld        Terraria.Item[] Terraria.Chest::item
+IL_0002C: ldloc.0      
+IL_0002D: ldsfld       Terraria.Player[] Terraria.Main::player
+IL_00032: ldarg.0      
+IL_00033: ldelem.ref   
+IL_00034: ldfld        Terraria.Chest Terraria.Player::bank4
+IL_00039: ldfld        Terraria.Item[] Terraria.Chest::item
+IL_0003E: ldloc.0      
+IL_0003F: ldelem.ref   
+IL_00040: ldsfld       Terraria.Player[] Terraria.Main::player
+IL_00045: ldarg.0      
+IL_00046: ldelem.ref   
+IL_00047: callvirt     Microsoft.Xna.Framework.Vector2 Terraria.Entity::get_Center()
+IL_0004C: call         Terraria.Item Terraria.Chest::PutItemInNearbyChest(Terraria.Item,Microsoft.Xna.Framework.Vector2)
+IL_00051: stelem.ref   
+IL_00052: ldc.i4.5     
+IL_00053: ldc.i4.m1    
+IL_00054: ldc.i4.m1    
+IL_00055: ldnull       
+IL_00056: ldarg.0      
+IL_00057: ldarg.1      
+IL_00058: conv.r4      
+IL_00059: ldsfld       Terraria.Player[] Terraria.Main::player
+IL_0005E: ldarg.0      
+IL_0005F: ldelem.ref   
+IL_00060: ldfld        Terraria.Chest Terraria.Player::bank4
+IL_00065: ldfld        Terraria.Item[] Terraria.Chest::item
+IL_0006A: ldloc.0      
+IL_0006B: ldelem.ref   
+IL_0006C: ldfld        System.Int32 Terraria.Item::prefix
+IL_00071: conv.r4      
+IL_00072: ldc.r4       0
+IL_00077: ldc.i4.0     
+IL_00078: ldc.i4.0     
+IL_00079: ldc.i4.0     
+IL_0007A: call         System.Void Terraria.NetMessage::SendData(System.Int32,System.Int32,System.Int32,Terraria.Localization.NetworkText,System.Int32,System.Single,System.Single,System.Single,System.Int32,System.Int32,System.Int32)
+IL_0007F: ret          
+IL_00080: ldarg.1      
+IL_00081: ldc.i4.s     58
+IL_00083: bge.s        IL_000DA
+IL_00085: ldsfld       Terraria.Player[] Terraria.Main::player
+IL_0008A: ldarg.0      
+IL_0008B: ldelem.ref   
+IL_0008C: ldfld        Terraria.Item[] Terraria.Player::inventory
+IL_00091: ldarg.1      
+IL_00092: ldsfld       Terraria.Player[] Terraria.Main::player
+IL_00097: ldarg.0      
+IL_00098: ldelem.ref   
+IL_00099: ldfld        Terraria.Item[] Terraria.Player::inventory
+IL_0009E: ldarg.1      
+IL_0009F: ldelem.ref   
+IL_000A0: ldsfld       Terraria.Player[] Terraria.Main::player
+IL_000A5: ldarg.0      
+IL_000A6: ldelem.ref   
+IL_000A7: callvirt     Microsoft.Xna.Framework.Vector2 Terraria.Entity::get_Center()
+IL_000AC: call         Terraria.Item Terraria.Chest::PutItemInNearbyChest(Terraria.Item,Microsoft.Xna.Framework.Vector2)
+IL_000B1: stelem.ref   
+IL_000B2: ldc.i4.5     
+IL_000B3: ldc.i4.m1    
+IL_000B4: ldc.i4.m1    
+IL_000B5: ldnull       
+IL_000B6: ldarg.0      
+IL_000B7: ldarg.1      
+IL_000B8: conv.r4      
+IL_000B9: ldsfld       Terraria.Player[] Terraria.Main::player
+IL_000BE: ldarg.0      
+IL_000BF: ldelem.ref   
+IL_000C0: ldfld        Terraria.Item[] Terraria.Player::inventory
+IL_000C5: ldarg.1      
+IL_000C6: ldelem.ref   
+IL_000C7: ldfld        System.Int32 Terraria.Item::prefix
+IL_000CC: conv.r4      
+IL_000CD: ldc.r4       0
+IL_000D2: ldc.i4.0     
+IL_000D3: ldc.i4.0     
+IL_000D4: ldc.i4.0     
+IL_000D5: call         System.Void Terraria.NetMessage::SendData(System.Int32,System.Int32,System.Int32,Terraria.Localization.NetworkText,System.Int32,System.Single,System.Single,System.Single,System.Int32,System.Int32,System.Int32)
+IL_000DA: ret          

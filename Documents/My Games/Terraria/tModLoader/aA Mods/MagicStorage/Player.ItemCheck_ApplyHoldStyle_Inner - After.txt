@@ -1,0 +1,1391 @@
+[03ene.2025 - 21:39:49]
+// ILCursor: Terraria.Player::ItemCheck_ApplyHoldStyle_Inner
+
+// Arguments:
+     [0] Terraria.Player this
+     [1] System.Single mountOffset
+     [2] Terraria.Item sItem
+     [3] Microsoft.Xna.Framework.Rectangle heldItemFrame
+
+// Locals:
+     [0] Terraria.Player/CompositeArmStretchAmount V_0
+     [1] System.Single V_1
+     [2] System.Single V_2
+     [3] System.Single V_3
+     [4] System.Int32 V_4
+     [5] System.Int32 V_5
+     [6] System.Int32 V_6
+     [7] System.Int32 V_7
+     [8] Microsoft.Xna.Framework.Color V_8
+     [9] System.Int32 V_9
+    [10] System.Int32 V_10
+    [11] Terraria.Tile V_11
+    [12] System.Int32 V_12
+    [13] System.Single V_13
+    [14] Terraria.Player/CompositeArmStretchAmount V_14
+    [15] Terraria.Player/CompositeArmStretchAmount V_15
+    [16] System.Single V_16
+    [17] System.Single V_17
+    [18] System.Single V_18
+    [19] System.Single V_19
+    [20] Microsoft.Xna.Framework.Vector2 V_20
+    [21] Microsoft.Xna.Framework.Vector2 V_21
+    [22] Terraria.Player/CompositeArmStretchAmount V_22
+    [23] Terraria.Player/CompositeArmStretchAmount V_23
+    [24] Microsoft.Xna.Framework.Vector2 V_24
+    [25] Terraria.Player/CompositeArmStretchAmount V_25
+
+// Body:
+IL_00000: ldarg.0      
+IL_00001: ldfld        System.Boolean Terraria.Player::isPettingAnimal
+IL_00006: brfalse.s    IL_00045
+IL_00008: ldarg.0      
+IL_00009: ldfld        System.Int32 Terraria.Player::miscCounter
+IL_0000E: ldc.i4.s     14
+IL_00010: rem          
+IL_00011: ldc.i4.7     
+IL_00012: div          
+IL_00013: ldc.i4.3     
+IL_00014: stloc.0      
+IL_00015: ldc.i4.1     
+IL_00016: bne.un.s     IL_0001A
+IL_00018: ldc.i4.0     
+IL_00019: stloc.0      
+IL_0001A: ldc.r4       0,3
+IL_0001F: stloc.1      
+IL_00020: ldarg.0      
+IL_00021: ldfld        System.Boolean Terraria.Player::isTheAnimalBeingPetSmall
+IL_00026: brfalse.s    IL_0002E
+IL_00028: ldc.r4       0,2
+IL_0002D: stloc.1      
+IL_0002E: ldarg.0      
+IL_0002F: ldc.i4.1     
+IL_00030: ldloc.0      
+IL_00031: ldc.r4       -6,2831855
+IL_00036: ldloc.1      
+IL_00037: mul          
+IL_00038: ldarg.0      
+IL_00039: ldfld        System.Int32 Terraria.Entity::direction
+IL_0003E: conv.r4      
+IL_0003F: mul          
+IL_00040: call         System.Void Terraria.Player::SetCompositeArmBack(System.Boolean,Terraria.Player/CompositeArmStretchAmount,System.Single)
+IL_00045: ldarg.0      
+IL_00046: ldarg.2      
+IL_00047: call         System.Boolean Terraria.Player::CanVisuallyHoldItem(Terraria.Item)
+IL_0004C: brtrue.s     IL_0004F
+IL_0004E: ret          
+IL_0004F: ldarg.2      
+IL_00050: ldfld        System.Int32 Terraria.Item::holdStyle
+IL_00055: ldc.i4.1     
+IL_00056: bne.un       IL_00A0E
+IL_0005B: ldarg.0      
+IL_0005C: ldfld        System.Boolean Terraria.Player::pulley
+IL_00061: brtrue       IL_00A0E
+IL_00066: ldsfld       System.Boolean Terraria.Main::dedServ
+IL_0006B: brfalse.s    IL_000A4
+IL_0006D: ldarg.0      
+IL_0006E: ldflda       Microsoft.Xna.Framework.Vector2 Terraria.Player::itemLocation
+IL_00073: ldarg.0      
+IL_00074: ldflda       Microsoft.Xna.Framework.Vector2 Terraria.Entity::position
+IL_00079: ldfld        System.Single Microsoft.Xna.Framework.Vector2::X
+IL_0007E: ldarg.0      
+IL_0007F: ldfld        System.Int32 Terraria.Entity::width
+IL_00084: conv.r4      
+IL_00085: ldc.r4       0,5
+IL_0008A: mul          
+IL_0008B: add          
+IL_0008C: ldc.r4       20
+IL_00091: ldarg.0      
+IL_00092: ldfld        System.Int32 Terraria.Entity::direction
+IL_00097: conv.r4      
+IL_00098: mul          
+IL_00099: add          
+IL_0009A: stfld        System.Single Microsoft.Xna.Framework.Vector2::X
+IL_0009F: br           IL_006CF
+IL_000A4: ldarg.2      
+IL_000A5: ldfld        System.Int32 Terraria.Item::type
+IL_000AA: ldc.i4       930
+IL_000AF: bne.un       IL_00324
+IL_000B4: ldarg.0      
+IL_000B5: ldflda       Microsoft.Xna.Framework.Vector2 Terraria.Player::itemLocation
+IL_000BA: ldarg.0      
+IL_000BB: ldflda       Microsoft.Xna.Framework.Vector2 Terraria.Entity::position
+IL_000C0: ldfld        System.Single Microsoft.Xna.Framework.Vector2::X
+IL_000C5: ldarg.0      
+IL_000C6: ldfld        System.Int32 Terraria.Entity::width
+IL_000CB: conv.r4      
+IL_000CC: ldc.r4       0,5
+IL_000D1: mul          
+IL_000D2: add          
+IL_000D3: ldc.i4.2     
+IL_000D4: ldarg.0      
+IL_000D5: ldfld        System.Int32 Terraria.Entity::direction
+IL_000DA: mul          
+IL_000DB: conv.r4      
+IL_000DC: sub          
+IL_000DD: stfld        System.Single Microsoft.Xna.Framework.Vector2::X
+IL_000E2: ldarg.0      
+IL_000E3: ldflda       Microsoft.Xna.Framework.Vector2 Terraria.Entity::position
+IL_000E8: ldfld        System.Single Microsoft.Xna.Framework.Vector2::X
+IL_000ED: ldarg.0      
+IL_000EE: ldfld        System.Int32 Terraria.Entity::width
+IL_000F3: ldc.i4.2     
+IL_000F4: div          
+IL_000F5: conv.r4      
+IL_000F6: add          
+IL_000F7: ldc.i4.s     38
+IL_000F9: ldarg.0      
+IL_000FA: ldfld        System.Int32 Terraria.Entity::direction
+IL_000FF: mul          
+IL_00100: conv.r4      
+IL_00101: add          
+IL_00102: stloc.2      
+IL_00103: ldarg.0      
+IL_00104: ldfld        System.Int32 Terraria.Entity::direction
+IL_00109: ldc.i4.1     
+IL_0010A: bne.un.s     IL_00114
+IL_0010C: ldloc.2      
+IL_0010D: ldc.r4       10
+IL_00112: sub          
+IL_00113: stloc.2      
+IL_00114: ldarg.0      
+IL_00115: call         Microsoft.Xna.Framework.Vector2 Terraria.Player::get_MountedCenter()
+IL_0011A: ldfld        System.Single Microsoft.Xna.Framework.Vector2::Y
+IL_0011F: ldc.r4       4
+IL_00124: ldarg.0      
+IL_00125: ldfld        System.Single Terraria.Player::gravDir
+IL_0012A: mul          
+IL_0012B: sub          
+IL_0012C: stloc.3      
+IL_0012D: ldarg.0      
+IL_0012E: ldfld        System.Single Terraria.Player::gravDir
+IL_00133: ldc.r4       -1
+IL_00138: bne.un.s     IL_00142
+IL_0013A: ldloc.3      
+IL_0013B: ldc.r4       8
+IL_00140: sub          
+IL_00141: stloc.3      
+IL_00142: ldarg.0      
+IL_00143: ldloca.s     V_2
+IL_00145: ldloca.s     V_3
+IL_00147: call         System.Void Terraria.Player::RotateRelativePoint(System.Single&,System.Single&)
+IL_0014C: ldc.i4.0     
+IL_0014D: stloc.s      V_4
+IL_0014F: ldc.i4.s     54
+IL_00151: stloc.s      V_5
+IL_00153: br.s         IL_00193
+IL_00155: ldarg.0      
+IL_00156: ldfld        Terraria.Item[] Terraria.Player::inventory
+IL_0015B: ldloc.s      V_5
+IL_0015D: ldelem.ref   
+IL_0015E: ldfld        System.Int32 Terraria.Item::stack
+IL_00163: ldc.i4.0     
+IL_00164: ble.s        IL_0018D
+IL_00166: ldarg.0      
+IL_00167: ldfld        Terraria.Item[] Terraria.Player::inventory
+IL_0016C: ldloc.s      V_5
+IL_0016E: ldelem.ref   
+IL_0016F: ldfld        System.Int32 Terraria.Item::ammo
+IL_00174: ldc.i4       931
+IL_00179: bne.un.s     IL_0018D
+IL_0017B: ldarg.0      
+IL_0017C: ldfld        Terraria.Item[] Terraria.Player::inventory
+IL_00181: ldloc.s      V_5
+IL_00183: ldelem.ref   
+IL_00184: ldfld        System.Int32 Terraria.Item::type
+IL_00189: stloc.s      V_4
+IL_0018B: br.s         IL_00199
+IL_0018D: ldloc.s      V_5
+IL_0018F: ldc.i4.1     
+IL_00190: add          
+IL_00191: stloc.s      V_5
+IL_00193: ldloc.s      V_5
+IL_00195: ldc.i4.s     58
+IL_00197: blt.s        IL_00155
+IL_00199: ldloc.s      V_4
+IL_0019B: brtrue.s     IL_001E6
+IL_0019D: ldc.i4.0     
+IL_0019E: stloc.s      V_6
+IL_001A0: br.s         IL_001E0
+IL_001A2: ldarg.0      
+IL_001A3: ldfld        Terraria.Item[] Terraria.Player::inventory
+IL_001A8: ldloc.s      V_6
+IL_001AA: ldelem.ref   
+IL_001AB: ldfld        System.Int32 Terraria.Item::stack
+IL_001B0: ldc.i4.0     
+IL_001B1: ble.s        IL_001DA
+IL_001B3: ldarg.0      
+IL_001B4: ldfld        Terraria.Item[] Terraria.Player::inventory
+IL_001B9: ldloc.s      V_6
+IL_001BB: ldelem.ref   
+IL_001BC: ldfld        System.Int32 Terraria.Item::ammo
+IL_001C1: ldc.i4       931
+IL_001C6: bne.un.s     IL_001DA
+IL_001C8: ldarg.0      
+IL_001C9: ldfld        Terraria.Item[] Terraria.Player::inventory
+IL_001CE: ldloc.s      V_6
+IL_001D0: ldelem.ref   
+IL_001D1: ldfld        System.Int32 Terraria.Item::type
+IL_001D6: stloc.s      V_4
+IL_001D8: br.s         IL_001E6
+IL_001DA: ldloc.s      V_6
+IL_001DC: ldc.i4.1     
+IL_001DD: add          
+IL_001DE: stloc.s      V_6
+IL_001E0: ldloc.s      V_6
+IL_001E2: ldc.i4.s     54
+IL_001E4: blt.s        IL_001A2
+IL_001E6: ldloc.s      V_4
+IL_001E8: ldc.i4       931
+IL_001ED: beq.s        IL_00217
+IL_001EF: ldloc.s      V_4
+IL_001F1: ldc.i4       1614
+IL_001F6: beq.s        IL_0021D
+IL_001F8: ldloc.s      V_4
+IL_001FA: ldc.i4       5377
+IL_001FF: sub          
+IL_00200: switch       (IL_00226, IL_0022F, IL_00235, IL_0023B)
+IL_00215: br.s         IL_00242
+IL_00217: ldc.i4.s     127
+IL_00219: stloc.s      V_4
+IL_0021B: br.s         IL_00242
+IL_0021D: ldc.i4       187
+IL_00222: stloc.s      V_4
+IL_00224: br.s         IL_00242
+IL_00226: ldc.i4       169
+IL_0022B: stloc.s      V_4
+IL_0022D: br.s         IL_00242
+IL_0022F: ldc.i4.s     75
+IL_00231: stloc.s      V_4
+IL_00233: br.s         IL_00242
+IL_00235: ldc.i4.s     66
+IL_00237: stloc.s      V_4
+IL_00239: br.s         IL_00242
+IL_0023B: ldc.i4       310
+IL_00240: stloc.s      V_4
+IL_00242: ldloc.s      V_4
+IL_00244: ldc.i4.0     
+IL_00245: ble          IL_006CF
+IL_0024A: ldloc.2      
+IL_0024B: ldloc.3      
+IL_0024C: ldarg.0      
+IL_0024D: ldfld        System.Single Terraria.Player::gfxOffY
+IL_00252: add          
+IL_00253: newobj       System.Void Microsoft.Xna.Framework.Vector2::.ctor(System.Single,System.Single)
+IL_00258: ldc.i4.6     
+IL_00259: ldc.i4.6     
+IL_0025A: ldloc.s      V_4
+IL_0025C: ldc.r4       0
+IL_00261: ldc.r4       0
+IL_00266: ldc.i4.s     100
+IL_00268: ldloca.s     V_8
+IL_0026A: initobj      Microsoft.Xna.Framework.Color
+IL_00270: ldloc.s      V_8
+IL_00272: ldc.r4       1,6
+IL_00277: call         System.Int32 Terraria.Dust::NewDust(Microsoft.Xna.Framework.Vector2,System.Int32,System.Int32,System.Int32,System.Single,System.Single,System.Int32,Microsoft.Xna.Framework.Color,System.Single)
+IL_0027C: stloc.s      V_7
+IL_0027E: ldsfld       Terraria.Dust[] Terraria.Main::dust
+IL_00283: ldloc.s      V_7
+IL_00285: ldelem.ref   
+IL_00286: ldc.i4.1     
+IL_00287: stfld        System.Boolean Terraria.Dust::noGravity
+IL_0028C: ldsfld       Terraria.Dust[] Terraria.Main::dust
+IL_00291: ldloc.s      V_7
+IL_00293: ldelem.ref   
+IL_00294: ldflda       Microsoft.Xna.Framework.Vector2 Terraria.Dust::velocity
+IL_00299: ldflda       System.Single Microsoft.Xna.Framework.Vector2::Y
+IL_0029E: dup          
+IL_0029F: ldind.r4     
+IL_002A0: ldc.r4       4
+IL_002A5: ldarg.0      
+IL_002A6: ldfld        System.Single Terraria.Player::gravDir
+IL_002AB: mul          
+IL_002AC: sub          
+IL_002AD: stind.r4     
+IL_002AE: ldloc.s      V_4
+IL_002B0: ldc.i4.s     66
+IL_002B2: bne.un       IL_006CF
+IL_002B7: ldsfld       Terraria.Dust[] Terraria.Main::dust
+IL_002BC: ldloc.s      V_7
+IL_002BE: ldelem.ref   
+IL_002BF: ldsfld       System.Single Terraria.Main::GlobalTimeWrappedHourly
+IL_002C4: ldc.r4       0,6
+IL_002C9: mul          
+IL_002CA: ldc.r4       1
+IL_002CF: rem          
+IL_002D0: ldc.r4       1
+IL_002D5: ldc.r4       0,5
+IL_002DA: ldc.i4       255
+IL_002DF: call         Microsoft.Xna.Framework.Color Terraria.Main::hslToRgb(System.Single,System.Single,System.Single,System.Byte)
+IL_002E4: stfld        Microsoft.Xna.Framework.Color Terraria.Dust::color
+IL_002E9: ldsfld       Terraria.Dust[] Terraria.Main::dust
+IL_002EE: ldloc.s      V_7
+IL_002F0: ldelem.ref   
+IL_002F1: dup          
+IL_002F2: ldfld        System.Single Terraria.Dust::scale
+IL_002F7: ldc.r4       0,5
+IL_002FC: mul          
+IL_002FD: stfld        System.Single Terraria.Dust::scale
+IL_00302: ldsfld       Terraria.Dust[] Terraria.Main::dust
+IL_00307: ldloc.s      V_7
+IL_00309: ldelem.ref   
+IL_0030A: dup          
+IL_0030B: ldfld        Microsoft.Xna.Framework.Vector2 Terraria.Dust::velocity
+IL_00310: ldc.r4       0,75
+IL_00315: call         Microsoft.Xna.Framework.Vector2 Microsoft.Xna.Framework.Vector2::op_Multiply(Microsoft.Xna.Framework.Vector2,System.Single)
+IL_0031A: stfld        Microsoft.Xna.Framework.Vector2 Terraria.Dust::velocity
+IL_0031F: br           IL_006CF
+IL_00324: ldarg.2      
+IL_00325: ldfld        System.Int32 Terraria.Item::type
+IL_0032A: ldc.i4       968
+IL_0032F: bne.un       IL_0056C
+IL_00334: ldarg.0      
+IL_00335: ldc.i4       709
+IL_0033A: ldc.i4       16231994
+IL_0033F: call         T MonoMod.Utils.DynamicReferenceManager::GetValueTUnsafe<System.Delegate>(System.Int32,System.Int32)
+IL_00344: call         TResult MonoMod.Cil.FastDelegateInvokers::InvokeTypeVal1<System.Boolean,Terraria.Player>(T0,MonoMod.Cil.FastDelegateInvokers/TypeVal1`2<TResult,T0>)
+IL_00349: brtrue       IL_006CF
+IL_0034E: ldarg.0      
+IL_0034F: ldflda       Microsoft.Xna.Framework.Vector2 Terraria.Player::itemLocation
+IL_00354: ldarg.0      
+IL_00355: ldflda       Microsoft.Xna.Framework.Vector2 Terraria.Entity::position
+IL_0035A: ldfld        System.Single Microsoft.Xna.Framework.Vector2::X
+IL_0035F: ldarg.0      
+IL_00360: ldfld        System.Int32 Terraria.Entity::width
+IL_00365: conv.r4      
+IL_00366: ldc.r4       0,5
+IL_0036B: mul          
+IL_0036C: add          
+IL_0036D: ldc.i4.8     
+IL_0036E: ldarg.0      
+IL_0036F: ldfld        System.Int32 Terraria.Entity::direction
+IL_00374: mul          
+IL_00375: conv.r4      
+IL_00376: add          
+IL_00377: stfld        System.Single Microsoft.Xna.Framework.Vector2::X
+IL_0037C: ldarg.0      
+IL_0037D: ldfld        System.Int32 Terraria.Entity::whoAmI
+IL_00382: ldsfld       System.Int32 Terraria.Main::myPlayer
+IL_00387: bne.un       IL_006CF
+IL_0038C: ldarg.0      
+IL_0038D: ldflda       Microsoft.Xna.Framework.Vector2 Terraria.Player::itemLocation
+IL_00392: ldfld        System.Single Microsoft.Xna.Framework.Vector2::X
+IL_00397: ldarg.3      
+IL_00398: ldfld        System.Int32 Microsoft.Xna.Framework.Rectangle::Width
+IL_0039D: conv.r4      
+IL_0039E: ldc.r4       0,8
+IL_003A3: mul          
+IL_003A4: ldarg.0      
+IL_003A5: ldfld        System.Int32 Terraria.Entity::direction
+IL_003AA: conv.r4      
+IL_003AB: mul          
+IL_003AC: add          
+IL_003AD: conv.i4      
+IL_003AE: ldc.i4.s     16
+IL_003B0: div          
+IL_003B1: stloc.s      V_9
+IL_003B3: ldarg.0      
+IL_003B4: ldflda       Microsoft.Xna.Framework.Vector2 Terraria.Player::itemLocation
+IL_003B9: ldfld        System.Single Microsoft.Xna.Framework.Vector2::Y
+IL_003BE: ldarg.1      
+IL_003BF: add          
+IL_003C0: ldarg.3      
+IL_003C1: ldfld        System.Int32 Microsoft.Xna.Framework.Rectangle::Height
+IL_003C6: ldc.i4.2     
+IL_003C7: div          
+IL_003C8: conv.r4      
+IL_003C9: add          
+IL_003CA: conv.i4      
+IL_003CB: ldc.i4.s     16
+IL_003CD: div          
+IL_003CE: stloc.s      V_10
+IL_003D0: ldsflda      Terraria.Tilemap Terraria.Main::tile
+IL_003D5: ldloc.s      V_9
+IL_003D7: ldloc.s      V_10
+IL_003D9: call         Terraria.Tile Terraria.Tilemap::get_Item(System.Int32,System.Int32)
+IL_003DE: ldnull       
+IL_003DF: call         System.Boolean Terraria.Tile::op_Equality(Terraria.Tile,System.ArgumentException)
+IL_003E4: brfalse.s    IL_003FE
+IL_003E6: ldsflda      Terraria.Tilemap Terraria.Main::tile
+IL_003EB: ldloc.s      V_9
+IL_003ED: ldloc.s      V_10
+IL_003EF: ldloca.s     V_11
+IL_003F1: initobj      Terraria.Tile
+IL_003F7: ldloc.s      V_11
+IL_003F9: call         System.Void Terraria.Tilemap::set_Item(System.Int32,System.Int32,Terraria.Tile)
+IL_003FE: ldsflda      Terraria.Tilemap Terraria.Main::tile
+IL_00403: ldloc.s      V_9
+IL_00405: ldloc.s      V_10
+IL_00407: call         Terraria.Tile Terraria.Tilemap::get_Item(System.Int32,System.Int32)
+IL_0040C: stloc.s      V_11
+IL_0040E: ldloca.s     V_11
+IL_00410: call         System.Boolean Terraria.Tile::active()
+IL_00415: brfalse      IL_00560
+IL_0041A: ldsfld       System.Boolean[] Terraria.ID.TileID/Sets::Campfire
+IL_0041F: ldsflda      Terraria.Tilemap Terraria.Main::tile
+IL_00424: ldloc.s      V_9
+IL_00426: ldloc.s      V_10
+IL_00428: call         Terraria.Tile Terraria.Tilemap::get_Item(System.Int32,System.Int32)
+IL_0042D: stloc.s      V_11
+IL_0042F: ldloca.s     V_11
+IL_00431: call         System.UInt16& Terraria.Tile::get_type()
+IL_00436: ldind.u2     
+IL_00437: ldelem.u1    
+IL_00438: brfalse      IL_00560
+IL_0043D: ldsflda      Terraria.Tilemap Terraria.Main::tile
+IL_00442: ldloc.s      V_9
+IL_00444: ldloc.s      V_10
+IL_00446: call         Terraria.Tile Terraria.Tilemap::get_Item(System.Int32,System.Int32)
+IL_0044B: stloc.s      V_11
+IL_0044D: ldloca.s     V_11
+IL_0044F: call         System.Int16& Terraria.Tile::get_frameY()
+IL_00454: ldind.i2     
+IL_00455: ldc.i4.s     54
+IL_00457: bge          IL_00560
+IL_0045C: ldarg.0      
+IL_0045D: ldarg.0      
+IL_0045E: ldfld        System.Int32 Terraria.Player::miscTimer
+IL_00463: ldc.i4.1     
+IL_00464: add          
+IL_00465: stfld        System.Int32 Terraria.Player::miscTimer
+IL_0046A: call         Terraria.Utilities.UnifiedRandom Terraria.Main::get_rand()
+IL_0046F: ldc.i4.5     
+IL_00470: callvirt     System.Int32 Terraria.Utilities.UnifiedRandom::Next(System.Int32)
+IL_00475: brtrue.s     IL_00485
+IL_00477: ldarg.0      
+IL_00478: ldarg.0      
+IL_00479: ldfld        System.Int32 Terraria.Player::miscTimer
+IL_0047E: ldc.i4.1     
+IL_0047F: add          
+IL_00480: stfld        System.Int32 Terraria.Player::miscTimer
+IL_00485: ldarg.0      
+IL_00486: ldfld        System.Int32 Terraria.Player::miscTimer
+IL_0048B: ldc.i4       900
+IL_00490: ble          IL_006CF
+IL_00495: ldarg.0      
+IL_00496: ldc.i4.0     
+IL_00497: stfld        System.Int32 Terraria.Player::miscTimer
+IL_0049C: ldarg.2      
+IL_0049D: ldc.i4       969
+IL_004A2: callvirt     System.Void Terraria.Item::SetDefaults(System.Int32)
+IL_004A7: ldarg.0      
+IL_004A8: ldfld        System.Int32 Terraria.Player::selectedItem
+IL_004AD: ldc.i4.s     58
+IL_004AF: bne.un.s     IL_004C0
+IL_004B1: ldsfld       Terraria.Item Terraria.Main::mouseItem
+IL_004B6: ldc.i4       969
+IL_004BB: callvirt     System.Void Terraria.Item::SetDefaults(System.Int32)
+IL_004C0: ldc.i4.0     
+IL_004C1: stloc.s      V_12
+IL_004C3: br           IL_00552
+IL_004C8: ldarg.0      
+IL_004C9: ldfld        Terraria.Item[] Terraria.Player::inventory
+IL_004CE: ldloc.s      V_12
+IL_004D0: ldelem.ref   
+IL_004D1: ldfld        System.Int32 Terraria.Item::type
+IL_004D6: ldarg.2      
+IL_004D7: ldfld        System.Int32 Terraria.Item::type
+IL_004DC: bne.un.s     IL_0054C
+IL_004DE: ldloc.s      V_12
+IL_004E0: ldarg.0      
+IL_004E1: ldfld        System.Int32 Terraria.Player::selectedItem
+IL_004E6: beq.s        IL_0054C
+IL_004E8: ldarg.0      
+IL_004E9: ldfld        Terraria.Item[] Terraria.Player::inventory
+IL_004EE: ldloc.s      V_12
+IL_004F0: ldelem.ref   
+IL_004F1: ldfld        System.Int32 Terraria.Item::stack
+IL_004F6: ldarg.0      
+IL_004F7: ldfld        Terraria.Item[] Terraria.Player::inventory
+IL_004FC: ldloc.s      V_12
+IL_004FE: ldelem.ref   
+IL_004FF: ldfld        System.Int32 Terraria.Item::maxStack
+IL_00504: bge.s        IL_0054C
+IL_00506: ldc.i4.7     
+IL_00507: ldc.i4.m1    
+IL_00508: ldc.i4.m1    
+IL_00509: ldc.i4.1     
+IL_0050A: ldc.r4       1
+IL_0050F: ldc.r4       0
+IL_00514: call         Microsoft.Xna.Framework.Audio.SoundEffectInstance Terraria.Audio.SoundEngine::PlaySound(System.Int32,System.Int32,System.Int32,System.Int32,System.Single,System.Single)
+IL_00519: pop          
+IL_0051A: ldarg.0      
+IL_0051B: ldfld        Terraria.Item[] Terraria.Player::inventory
+IL_00520: ldloc.s      V_12
+IL_00522: ldelem.ref   
+IL_00523: dup          
+IL_00524: ldfld        System.Int32 Terraria.Item::stack
+IL_00529: ldc.i4.1     
+IL_0052A: add          
+IL_0052B: stfld        System.Int32 Terraria.Item::stack
+IL_00530: ldarg.2      
+IL_00531: ldc.i4.0     
+IL_00532: callvirt     System.Void Terraria.Item::SetDefaults(System.Int32)
+IL_00537: ldarg.0      
+IL_00538: ldfld        System.Int32 Terraria.Player::selectedItem
+IL_0053D: ldc.i4.s     58
+IL_0053F: bne.un.s     IL_0054C
+IL_00541: ldsfld       Terraria.Item Terraria.Main::mouseItem
+IL_00546: ldc.i4.0     
+IL_00547: callvirt     System.Void Terraria.Item::SetDefaults(System.Int32)
+IL_0054C: ldloc.s      V_12
+IL_0054E: ldc.i4.1     
+IL_0054F: add          
+IL_00550: stloc.s      V_12
+IL_00552: ldloc.s      V_12
+IL_00554: ldc.i4.s     58
+IL_00556: blt          IL_004C8
+IL_0055B: br           IL_006CF
+IL_00560: ldarg.0      
+IL_00561: ldc.i4.0     
+IL_00562: stfld        System.Int32 Terraria.Player::miscTimer
+IL_00567: br           IL_006CF
+IL_0056C: ldarg.2      
+IL_0056D: ldfld        System.Int32 Terraria.Item::type
+IL_00572: ldc.i4       856
+IL_00577: bne.un.s     IL_005AC
+IL_00579: ldarg.0      
+IL_0057A: ldflda       Microsoft.Xna.Framework.Vector2 Terraria.Player::itemLocation
+IL_0057F: ldarg.0      
+IL_00580: ldflda       Microsoft.Xna.Framework.Vector2 Terraria.Entity::position
+IL_00585: ldfld        System.Single Microsoft.Xna.Framework.Vector2::X
+IL_0058A: ldarg.0      
+IL_0058B: ldfld        System.Int32 Terraria.Entity::width
+IL_00590: conv.r4      
+IL_00591: ldc.r4       0,5
+IL_00596: mul          
+IL_00597: add          
+IL_00598: ldc.i4.4     
+IL_00599: ldarg.0      
+IL_0059A: ldfld        System.Int32 Terraria.Entity::direction
+IL_0059F: mul          
+IL_005A0: conv.r4      
+IL_005A1: add          
+IL_005A2: stfld        System.Single Microsoft.Xna.Framework.Vector2::X
+IL_005A7: br           IL_006CF
+IL_005AC: ldarg.2      
+IL_005AD: ldfld        System.Int32 Terraria.Item::fishingPole
+IL_005B2: ldc.i4.0     
+IL_005B3: ble.s        IL_005F4
+IL_005B5: ldarg.0      
+IL_005B6: ldflda       Microsoft.Xna.Framework.Vector2 Terraria.Player::itemLocation
+IL_005BB: ldarg.0      
+IL_005BC: ldflda       Microsoft.Xna.Framework.Vector2 Terraria.Entity::position
+IL_005C1: ldfld        System.Single Microsoft.Xna.Framework.Vector2::X
+IL_005C6: ldarg.0      
+IL_005C7: ldfld        System.Int32 Terraria.Entity::width
+IL_005CC: conv.r4      
+IL_005CD: ldc.r4       0,5
+IL_005D2: mul          
+IL_005D3: add          
+IL_005D4: ldarg.3      
+IL_005D5: ldfld        System.Int32 Microsoft.Xna.Framework.Rectangle::Width
+IL_005DA: conv.r4      
+IL_005DB: ldc.r4       0,18
+IL_005E0: mul          
+IL_005E1: ldarg.0      
+IL_005E2: ldfld        System.Int32 Terraria.Entity::direction
+IL_005E7: conv.r4      
+IL_005E8: mul          
+IL_005E9: add          
+IL_005EA: stfld        System.Single Microsoft.Xna.Framework.Vector2::X
+IL_005EF: br           IL_006CF
+IL_005F4: ldarg.0      
+IL_005F5: ldflda       Microsoft.Xna.Framework.Vector2 Terraria.Player::itemLocation
+IL_005FA: ldarg.0      
+IL_005FB: ldflda       Microsoft.Xna.Framework.Vector2 Terraria.Entity::position
+IL_00600: ldfld        System.Single Microsoft.Xna.Framework.Vector2::X
+IL_00605: ldarg.0      
+IL_00606: ldfld        System.Int32 Terraria.Entity::width
+IL_0060B: conv.r4      
+IL_0060C: ldc.r4       0,5
+IL_00611: mul          
+IL_00612: add          
+IL_00613: ldarg.3      
+IL_00614: ldfld        System.Int32 Microsoft.Xna.Framework.Rectangle::Width
+IL_00619: conv.r4      
+IL_0061A: ldc.r4       0,5
+IL_0061F: mul          
+IL_00620: ldc.r4       2
+IL_00625: add          
+IL_00626: ldarg.0      
+IL_00627: ldfld        System.Int32 Terraria.Entity::direction
+IL_0062C: conv.r4      
+IL_0062D: mul          
+IL_0062E: add          
+IL_0062F: stfld        System.Single Microsoft.Xna.Framework.Vector2::X
+IL_00634: ldarg.2      
+IL_00635: ldfld        System.Int32 Terraria.Item::type
+IL_0063A: ldc.i4       282
+IL_0063F: beq.s        IL_00668
+IL_00641: ldarg.2      
+IL_00642: ldfld        System.Int32 Terraria.Item::type
+IL_00647: ldc.i4       286
+IL_0064C: beq.s        IL_00668
+IL_0064E: ldarg.2      
+IL_0064F: ldfld        System.Int32 Terraria.Item::type
+IL_00654: ldc.i4       3112
+IL_00659: beq.s        IL_00668
+IL_0065B: ldarg.2      
+IL_0065C: ldfld        System.Int32 Terraria.Item::type
+IL_00661: ldc.i4       4776
+IL_00666: bne.un.s     IL_00696
+IL_00668: ldarg.0      
+IL_00669: ldflda       Microsoft.Xna.Framework.Vector2 Terraria.Player::itemLocation
+IL_0066E: ldflda       System.Single Microsoft.Xna.Framework.Vector2::X
+IL_00673: dup          
+IL_00674: ldind.r4     
+IL_00675: ldarg.0      
+IL_00676: ldfld        System.Int32 Terraria.Entity::direction
+IL_0067B: ldc.i4.2     
+IL_0067C: mul          
+IL_0067D: conv.r4      
+IL_0067E: sub          
+IL_0067F: stind.r4     
+IL_00680: ldarg.0      
+IL_00681: ldflda       Microsoft.Xna.Framework.Vector2 Terraria.Player::itemLocation
+IL_00686: ldflda       System.Single Microsoft.Xna.Framework.Vector2::Y
+IL_0068B: dup          
+IL_0068C: ldind.r4     
+IL_0068D: ldc.r4       4
+IL_00692: add          
+IL_00693: stind.r4     
+IL_00694: br.s         IL_006CF
+IL_00696: ldarg.2      
+IL_00697: ldfld        System.Int32 Terraria.Item::type
+IL_0069C: ldc.i4       3002
+IL_006A1: bne.un.s     IL_006CF
+IL_006A3: ldarg.0      
+IL_006A4: ldflda       Microsoft.Xna.Framework.Vector2 Terraria.Player::itemLocation
+IL_006A9: ldflda       System.Single Microsoft.Xna.Framework.Vector2::X
+IL_006AE: dup          
+IL_006AF: ldind.r4     
+IL_006B0: ldc.i4.4     
+IL_006B1: ldarg.0      
+IL_006B2: ldfld        System.Int32 Terraria.Entity::direction
+IL_006B7: mul          
+IL_006B8: conv.r4      
+IL_006B9: sub          
+IL_006BA: stind.r4     
+IL_006BB: ldarg.0      
+IL_006BC: ldflda       Microsoft.Xna.Framework.Vector2 Terraria.Player::itemLocation
+IL_006C1: ldflda       System.Single Microsoft.Xna.Framework.Vector2::Y
+IL_006C6: dup          
+IL_006C7: ldind.r4     
+IL_006C8: ldc.r4       2
+IL_006CD: add          
+IL_006CE: stind.r4     
+IL_006CF: ldarg.0      
+IL_006D0: ldflda       Microsoft.Xna.Framework.Vector2 Terraria.Player::itemLocation
+IL_006D5: ldarg.0      
+IL_006D6: ldflda       Microsoft.Xna.Framework.Vector2 Terraria.Entity::position
+IL_006DB: ldfld        System.Single Microsoft.Xna.Framework.Vector2::Y
+IL_006E0: ldc.r4       24
+IL_006E5: add          
+IL_006E6: ldarg.1      
+IL_006E7: add          
+IL_006E8: stfld        System.Single Microsoft.Xna.Framework.Vector2::Y
+IL_006ED: ldarg.2      
+IL_006EE: ldfld        System.Int32 Terraria.Item::type
+IL_006F3: ldc.i4       856
+IL_006F8: bne.un.s     IL_00718
+IL_006FA: ldarg.0      
+IL_006FB: ldflda       Microsoft.Xna.Framework.Vector2 Terraria.Player::itemLocation
+IL_00700: ldarg.0      
+IL_00701: ldflda       Microsoft.Xna.Framework.Vector2 Terraria.Entity::position
+IL_00706: ldfld        System.Single Microsoft.Xna.Framework.Vector2::Y
+IL_0070B: ldc.r4       34
+IL_00710: add          
+IL_00711: ldarg.1      
+IL_00712: add          
+IL_00713: stfld        System.Single Microsoft.Xna.Framework.Vector2::Y
+IL_00718: ldarg.2      
+IL_00719: ldfld        System.Int32 Terraria.Item::type
+IL_0071E: ldc.i4       930
+IL_00723: bne.un.s     IL_00743
+IL_00725: ldarg.0      
+IL_00726: ldflda       Microsoft.Xna.Framework.Vector2 Terraria.Player::itemLocation
+IL_0072B: ldarg.0      
+IL_0072C: ldflda       Microsoft.Xna.Framework.Vector2 Terraria.Entity::position
+IL_00731: ldfld        System.Single Microsoft.Xna.Framework.Vector2::Y
+IL_00736: ldc.r4       9
+IL_0073B: add          
+IL_0073C: ldarg.1      
+IL_0073D: add          
+IL_0073E: stfld        System.Single Microsoft.Xna.Framework.Vector2::Y
+IL_00743: ldarg.2      
+IL_00744: ldfld        System.Int32 Terraria.Item::fishingPole
+IL_00749: ldc.i4.0     
+IL_0074A: ble.s        IL_00765
+IL_0074C: ldarg.0      
+IL_0074D: ldflda       Microsoft.Xna.Framework.Vector2 Terraria.Player::itemLocation
+IL_00752: ldflda       System.Single Microsoft.Xna.Framework.Vector2::Y
+IL_00757: dup          
+IL_00758: ldind.r4     
+IL_00759: ldc.r4       4
+IL_0075E: add          
+IL_0075F: stind.r4     
+IL_00760: br           IL_00984
+IL_00765: ldarg.2      
+IL_00766: ldfld        System.Int32 Terraria.Item::type
+IL_0076B: ldc.i4       3476
+IL_00770: bne.un.s     IL_007AE
+IL_00772: ldarg.0      
+IL_00773: ldflda       Microsoft.Xna.Framework.Vector2 Terraria.Player::itemLocation
+IL_00778: ldarg.0      
+IL_00779: call         Microsoft.Xna.Framework.Vector2 Terraria.Entity::get_Center()
+IL_0077E: ldfld        System.Single Microsoft.Xna.Framework.Vector2::X
+IL_00783: ldc.i4.s     14
+IL_00785: ldarg.0      
+IL_00786: ldfld        System.Int32 Terraria.Entity::direction
+IL_0078B: mul          
+IL_0078C: conv.r4      
+IL_0078D: add          
+IL_0078E: stfld        System.Single Microsoft.Xna.Framework.Vector2::X
+IL_00793: ldarg.0      
+IL_00794: ldflda       Microsoft.Xna.Framework.Vector2 Terraria.Player::itemLocation
+IL_00799: ldarg.0      
+IL_0079A: call         Microsoft.Xna.Framework.Vector2 Terraria.Player::get_MountedCenter()
+IL_0079F: ldfld        System.Single Microsoft.Xna.Framework.Vector2::Y
+IL_007A4: stfld        System.Single Microsoft.Xna.Framework.Vector2::Y
+IL_007A9: br           IL_00984
+IL_007AE: ldarg.2      
+IL_007AF: ldfld        System.Int32 Terraria.Item::type
+IL_007B4: ldc.i4       3779
+IL_007B9: bne.un.s     IL_007FC
+IL_007BB: ldarg.0      
+IL_007BC: ldflda       Microsoft.Xna.Framework.Vector2 Terraria.Player::itemLocation
+IL_007C1: ldarg.0      
+IL_007C2: call         Microsoft.Xna.Framework.Vector2 Terraria.Entity::get_Center()
+IL_007C7: ldfld        System.Single Microsoft.Xna.Framework.Vector2::X
+IL_007CC: ldc.i4.6     
+IL_007CD: ldarg.0      
+IL_007CE: ldfld        System.Int32 Terraria.Entity::direction
+IL_007D3: mul          
+IL_007D4: conv.r4      
+IL_007D5: add          
+IL_007D6: stfld        System.Single Microsoft.Xna.Framework.Vector2::X
+IL_007DB: ldarg.0      
+IL_007DC: ldflda       Microsoft.Xna.Framework.Vector2 Terraria.Player::itemLocation
+IL_007E1: ldarg.0      
+IL_007E2: call         Microsoft.Xna.Framework.Vector2 Terraria.Player::get_MountedCenter()
+IL_007E7: ldfld        System.Single Microsoft.Xna.Framework.Vector2::Y
+IL_007EC: ldc.r4       6
+IL_007F1: add          
+IL_007F2: stfld        System.Single Microsoft.Xna.Framework.Vector2::Y
+IL_007F7: br           IL_00984
+IL_007FC: ldarg.2      
+IL_007FD: ldfld        System.Int32 Terraria.Item::type
+IL_00802: ldc.i4       4952
+IL_00807: bne.un.s     IL_0084A
+IL_00809: ldarg.0      
+IL_0080A: ldflda       Microsoft.Xna.Framework.Vector2 Terraria.Player::itemLocation
+IL_0080F: ldarg.0      
+IL_00810: call         Microsoft.Xna.Framework.Vector2 Terraria.Entity::get_Center()
+IL_00815: ldfld        System.Single Microsoft.Xna.Framework.Vector2::X
+IL_0081A: ldc.i4.2     
+IL_0081B: ldarg.0      
+IL_0081C: ldfld        System.Int32 Terraria.Entity::direction
+IL_00821: mul          
+IL_00822: conv.r4      
+IL_00823: add          
+IL_00824: stfld        System.Single Microsoft.Xna.Framework.Vector2::X
+IL_00829: ldarg.0      
+IL_0082A: ldflda       Microsoft.Xna.Framework.Vector2 Terraria.Player::itemLocation
+IL_0082F: ldarg.0      
+IL_00830: call         Microsoft.Xna.Framework.Vector2 Terraria.Player::get_MountedCenter()
+IL_00835: ldfld        System.Single Microsoft.Xna.Framework.Vector2::Y
+IL_0083A: ldc.r4       26
+IL_0083F: add          
+IL_00840: stfld        System.Single Microsoft.Xna.Framework.Vector2::Y
+IL_00845: br           IL_00984
+IL_0084A: ldarg.2      
+IL_0084B: ldfld        System.Int32 Terraria.Item::type
+IL_00850: ldc.i4       353
+IL_00855: bne.un.s     IL_00898
+IL_00857: ldarg.0      
+IL_00858: ldflda       Microsoft.Xna.Framework.Vector2 Terraria.Player::itemLocation
+IL_0085D: ldarg.0      
+IL_0085E: call         Microsoft.Xna.Framework.Vector2 Terraria.Entity::get_Center()
+IL_00863: ldfld        System.Single Microsoft.Xna.Framework.Vector2::X
+IL_00868: ldc.i4.6     
+IL_00869: ldarg.0      
+IL_0086A: ldfld        System.Int32 Terraria.Entity::direction
+IL_0086F: mul          
+IL_00870: conv.r4      
+IL_00871: add          
+IL_00872: stfld        System.Single Microsoft.Xna.Framework.Vector2::X
+IL_00877: ldarg.0      
+IL_00878: ldflda       Microsoft.Xna.Framework.Vector2 Terraria.Player::itemLocation
+IL_0087D: ldarg.0      
+IL_0087E: call         Microsoft.Xna.Framework.Vector2 Terraria.Player::get_MountedCenter()
+IL_00883: ldfld        System.Single Microsoft.Xna.Framework.Vector2::Y
+IL_00888: ldc.r4       11
+IL_0088D: add          
+IL_0088E: stfld        System.Single Microsoft.Xna.Framework.Vector2::Y
+IL_00893: br           IL_00984
+IL_00898: ldsfld       System.Boolean[] Terraria.ID.ItemID/Sets::IsFood
+IL_0089D: ldarg.2      
+IL_0089E: ldfld        System.Int32 Terraria.Item::type
+IL_008A3: ldelem.u1    
+IL_008A4: brfalse.s    IL_008EB
+IL_008A6: ldarg.0      
+IL_008A7: ldflda       Microsoft.Xna.Framework.Vector2 Terraria.Player::itemLocation
+IL_008AC: ldarg.0      
+IL_008AD: call         Microsoft.Xna.Framework.Vector2 Terraria.Entity::get_Center()
+IL_008B2: ldfld        System.Single Microsoft.Xna.Framework.Vector2::X
+IL_008B7: ldc.i4.4     
+IL_008B8: ldarg.0      
+IL_008B9: ldfld        System.Int32 Terraria.Entity::direction
+IL_008BE: mul          
+IL_008BF: conv.r4      
+IL_008C0: add          
+IL_008C1: stfld        System.Single Microsoft.Xna.Framework.Vector2::X
+IL_008C6: ldarg.0      
+IL_008C7: ldflda       Microsoft.Xna.Framework.Vector2 Terraria.Player::itemLocation
+IL_008CC: ldarg.0      
+IL_008CD: call         Microsoft.Xna.Framework.Vector2 Terraria.Player::get_MountedCenter()
+IL_008D2: ldfld        System.Single Microsoft.Xna.Framework.Vector2::Y
+IL_008D7: ldarg.3      
+IL_008D8: ldfld        System.Int32 Microsoft.Xna.Framework.Rectangle::Height
+IL_008DD: ldc.i4.2     
+IL_008DE: div          
+IL_008DF: conv.r4      
+IL_008E0: add          
+IL_008E1: stfld        System.Single Microsoft.Xna.Framework.Vector2::Y
+IL_008E6: br           IL_00984
+IL_008EB: ldarg.2      
+IL_008EC: ldfld        System.Int32 Terraria.Item::type
+IL_008F1: ldc.i4       4049
+IL_008F6: bne.un       IL_00984
+IL_008FB: call         Terraria.Utilities.UnifiedRandom Terraria.Main::get_rand()
+IL_00900: ldc.i4.4     
+IL_00901: callvirt     System.Int32 Terraria.Utilities.UnifiedRandom::Next(System.Int32)
+IL_00906: brtrue.s     IL_00984
+IL_00908: ldarg.0      
+IL_00909: call         Microsoft.Xna.Framework.Vector2 Terraria.Entity::get_Center()
+IL_0090E: ldarg.0      
+IL_0090F: ldfld        System.Int32 Terraria.Entity::direction
+IL_00914: ldc.i4.s     23
+IL_00916: mul          
+IL_00917: conv.r4      
+IL_00918: ldarg.0      
+IL_00919: ldfld        System.Single Terraria.Player::gravDir
+IL_0091E: ldc.r4       6
+IL_00923: mul          
+IL_00924: newobj       System.Void Microsoft.Xna.Framework.Vector2::.ctor(System.Single,System.Single)
+IL_00929: call         Microsoft.Xna.Framework.Vector2 Microsoft.Xna.Framework.Vector2::op_Addition(Microsoft.Xna.Framework.Vector2,Microsoft.Xna.Framework.Vector2)
+IL_0092E: ldc.i4.s     31
+IL_00930: call         Microsoft.Xna.Framework.Vector2 Microsoft.Xna.Framework.Vector2::get_Zero()
+IL_00935: newobj       System.Void System.Nullable`1<Microsoft.Xna.Framework.Vector2>::.ctor(T)
+IL_0093A: ldc.i4.s     127
+IL_0093C: ldloca.s     V_8
+IL_0093E: initobj      Microsoft.Xna.Framework.Color
+IL_00944: ldloc.s      V_8
+IL_00946: ldc.r4       0,7
+IL_0094B: call         Terraria.Dust Terraria.Dust::NewDustPerfect(Microsoft.Xna.Framework.Vector2,System.Int32,System.Nullable`1<Microsoft.Xna.Framework.Vector2>,System.Int32,Microsoft.Xna.Framework.Color,System.Single)
+IL_00950: dup          
+IL_00951: ldc.i4.1     
+IL_00952: stfld        System.Boolean Terraria.Dust::noGravity
+IL_00957: call         Terraria.Utilities.UnifiedRandom Terraria.Main::get_rand()
+IL_0095C: ldc.r4       1
+IL_00961: ldc.r4       1
+IL_00966: call         Microsoft.Xna.Framework.Vector2 Terraria.Utils::NextVector2Circular(Terraria.Utilities.UnifiedRandom,System.Single,System.Single)
+IL_0096B: ldc.r4       0
+IL_00970: ldc.r4       -1
+IL_00975: newobj       System.Void Microsoft.Xna.Framework.Vector2::.ctor(System.Single,System.Single)
+IL_0097A: call         Microsoft.Xna.Framework.Vector2 Microsoft.Xna.Framework.Vector2::op_Addition(Microsoft.Xna.Framework.Vector2,Microsoft.Xna.Framework.Vector2)
+IL_0097F: stfld        Microsoft.Xna.Framework.Vector2 Terraria.Dust::velocity
+IL_00984: ldarg.0      
+IL_00985: ldc.r4       0
+IL_0098A: stfld        System.Single Terraria.Player::itemRotation
+IL_0098F: ldarg.0      
+IL_00990: ldfld        System.Single Terraria.Player::gravDir
+IL_00995: ldc.r4       -1
+IL_0099A: bne.un       IL_00F24
+IL_0099F: ldarg.0      
+IL_009A0: ldc.r4       0
+IL_009A5: ldarg.0      
+IL_009A6: ldfld        System.Single Terraria.Player::itemRotation
+IL_009AB: sub          
+IL_009AC: stfld        System.Single Terraria.Player::itemRotation
+IL_009B1: ldarg.0      
+IL_009B2: ldflda       Microsoft.Xna.Framework.Vector2 Terraria.Player::itemLocation
+IL_009B7: ldarg.0      
+IL_009B8: ldflda       Microsoft.Xna.Framework.Vector2 Terraria.Entity::position
+IL_009BD: ldfld        System.Single Microsoft.Xna.Framework.Vector2::Y
+IL_009C2: ldarg.0      
+IL_009C3: ldfld        System.Int32 Terraria.Entity::height
+IL_009C8: conv.r4      
+IL_009C9: add          
+IL_009CA: ldarg.0      
+IL_009CB: ldflda       Microsoft.Xna.Framework.Vector2 Terraria.Entity::position
+IL_009D0: ldfld        System.Single Microsoft.Xna.Framework.Vector2::Y
+IL_009D5: ldarg.0      
+IL_009D6: ldflda       Microsoft.Xna.Framework.Vector2 Terraria.Player::itemLocation
+IL_009DB: ldfld        System.Single Microsoft.Xna.Framework.Vector2::Y
+IL_009E0: sub          
+IL_009E1: add          
+IL_009E2: ldarg.1      
+IL_009E3: add          
+IL_009E4: stfld        System.Single Microsoft.Xna.Framework.Vector2::Y
+IL_009E9: ldarg.2      
+IL_009EA: ldfld        System.Int32 Terraria.Item::type
+IL_009EF: ldc.i4       930
+IL_009F4: bne.un       IL_00F24
+IL_009F9: ldarg.0      
+IL_009FA: ldflda       Microsoft.Xna.Framework.Vector2 Terraria.Player::itemLocation
+IL_009FF: ldflda       System.Single Microsoft.Xna.Framework.Vector2::Y
+IL_00A04: dup          
+IL_00A05: ldind.r4     
+IL_00A06: ldc.r4       24
+IL_00A0B: sub          
+IL_00A0C: stind.r4     
+IL_00A0D: ret          
+IL_00A0E: ldarg.2      
+IL_00A0F: ldfld        System.Int32 Terraria.Item::holdStyle
+IL_00A14: ldc.i4.2     
+IL_00A15: bne.un       IL_00C22
+IL_00A1A: ldarg.0      
+IL_00A1B: ldfld        System.Boolean Terraria.Player::pulley
+IL_00A20: brtrue       IL_00C22
+IL_00A25: ldarg.2      
+IL_00A26: ldfld        System.Int32 Terraria.Item::type
+IL_00A2B: ldc.i4       946
+IL_00A30: beq.s        IL_00A42
+IL_00A32: ldarg.2      
+IL_00A33: ldfld        System.Int32 Terraria.Item::type
+IL_00A38: ldc.i4       4707
+IL_00A3D: bne.un       IL_00B69
+IL_00A42: ldarg.0      
+IL_00A43: ldc.r4       0
+IL_00A48: stfld        System.Single Terraria.Player::itemRotation
+IL_00A4D: ldarg.0      
+IL_00A4E: ldflda       Microsoft.Xna.Framework.Vector2 Terraria.Player::itemLocation
+IL_00A53: ldarg.0      
+IL_00A54: ldflda       Microsoft.Xna.Framework.Vector2 Terraria.Entity::position
+IL_00A59: ldfld        System.Single Microsoft.Xna.Framework.Vector2::X
+IL_00A5E: ldarg.0      
+IL_00A5F: ldfld        System.Int32 Terraria.Entity::width
+IL_00A64: conv.r4      
+IL_00A65: ldc.r4       0,5
+IL_00A6A: mul          
+IL_00A6B: add          
+IL_00A6C: ldc.i4.s     16
+IL_00A6E: ldarg.0      
+IL_00A6F: ldfld        System.Int32 Terraria.Entity::direction
+IL_00A74: mul          
+IL_00A75: conv.r4      
+IL_00A76: sub          
+IL_00A77: stfld        System.Single Microsoft.Xna.Framework.Vector2::X
+IL_00A7C: ldarg.0      
+IL_00A7D: ldflda       Microsoft.Xna.Framework.Vector2 Terraria.Player::itemLocation
+IL_00A82: ldarg.0      
+IL_00A83: ldflda       Microsoft.Xna.Framework.Vector2 Terraria.Entity::position
+IL_00A88: ldfld        System.Single Microsoft.Xna.Framework.Vector2::Y
+IL_00A8D: ldc.r4       22
+IL_00A92: add          
+IL_00A93: ldarg.1      
+IL_00A94: add          
+IL_00A95: stfld        System.Single Microsoft.Xna.Framework.Vector2::Y
+IL_00A9A: ldarg.0      
+IL_00A9B: ldarg.0      
+IL_00A9C: ldflda       Microsoft.Xna.Framework.Vector2 Terraria.Entity::position
+IL_00AA1: ldfld        System.Single Microsoft.Xna.Framework.Vector2::Y
+IL_00AA6: ldc.r4       16
+IL_00AAB: div          
+IL_00AAC: conv.i4      
+IL_00AAD: stfld        System.Int32 Terraria.Player::fallStart
+IL_00AB2: ldarg.0      
+IL_00AB3: ldfld        System.Single Terraria.Player::gravDir
+IL_00AB8: ldc.r4       -1
+IL_00ABD: bne.un.s     IL_00B38
+IL_00ABF: ldarg.0      
+IL_00AC0: ldc.r4       0
+IL_00AC5: ldarg.0      
+IL_00AC6: ldfld        System.Single Terraria.Player::itemRotation
+IL_00ACB: sub          
+IL_00ACC: stfld        System.Single Terraria.Player::itemRotation
+IL_00AD1: ldarg.0      
+IL_00AD2: ldflda       Microsoft.Xna.Framework.Vector2 Terraria.Player::itemLocation
+IL_00AD7: ldarg.0      
+IL_00AD8: ldflda       Microsoft.Xna.Framework.Vector2 Terraria.Entity::position
+IL_00ADD: ldfld        System.Single Microsoft.Xna.Framework.Vector2::Y
+IL_00AE2: ldarg.0      
+IL_00AE3: ldfld        System.Int32 Terraria.Entity::height
+IL_00AE8: conv.r4      
+IL_00AE9: add          
+IL_00AEA: ldarg.0      
+IL_00AEB: ldflda       Microsoft.Xna.Framework.Vector2 Terraria.Entity::position
+IL_00AF0: ldfld        System.Single Microsoft.Xna.Framework.Vector2::Y
+IL_00AF5: ldarg.0      
+IL_00AF6: ldflda       Microsoft.Xna.Framework.Vector2 Terraria.Player::itemLocation
+IL_00AFB: ldfld        System.Single Microsoft.Xna.Framework.Vector2::Y
+IL_00B00: sub          
+IL_00B01: add          
+IL_00B02: stfld        System.Single Microsoft.Xna.Framework.Vector2::Y
+IL_00B07: ldarg.0      
+IL_00B08: ldflda       Microsoft.Xna.Framework.Vector2 Terraria.Entity::velocity
+IL_00B0D: ldfld        System.Single Microsoft.Xna.Framework.Vector2::Y
+IL_00B12: ldc.r4       -2
+IL_00B17: bge.un       IL_00F24
+IL_00B1C: ldarg.0      
+IL_00B1D: ldfld        System.Boolean Terraria.Player::controlDown
+IL_00B22: brtrue       IL_00F24
+IL_00B27: ldarg.0      
+IL_00B28: ldflda       Microsoft.Xna.Framework.Vector2 Terraria.Entity::velocity
+IL_00B2D: ldc.r4       -2
+IL_00B32: stfld        System.Single Microsoft.Xna.Framework.Vector2::Y
+IL_00B37: ret          
+IL_00B38: ldarg.0      
+IL_00B39: ldflda       Microsoft.Xna.Framework.Vector2 Terraria.Entity::velocity
+IL_00B3E: ldfld        System.Single Microsoft.Xna.Framework.Vector2::Y
+IL_00B43: ldc.r4       2
+IL_00B48: ble.un       IL_00F24
+IL_00B4D: ldarg.0      
+IL_00B4E: ldfld        System.Boolean Terraria.Player::controlDown
+IL_00B53: brtrue       IL_00F24
+IL_00B58: ldarg.0      
+IL_00B59: ldflda       Microsoft.Xna.Framework.Vector2 Terraria.Entity::velocity
+IL_00B5E: ldc.r4       2
+IL_00B63: stfld        System.Single Microsoft.Xna.Framework.Vector2::Y
+IL_00B68: ret          
+IL_00B69: ldarg.0      
+IL_00B6A: ldflda       Microsoft.Xna.Framework.Vector2 Terraria.Player::itemLocation
+IL_00B6F: ldarg.0      
+IL_00B70: ldflda       Microsoft.Xna.Framework.Vector2 Terraria.Entity::position
+IL_00B75: ldfld        System.Single Microsoft.Xna.Framework.Vector2::X
+IL_00B7A: ldarg.0      
+IL_00B7B: ldfld        System.Int32 Terraria.Entity::width
+IL_00B80: conv.r4      
+IL_00B81: ldc.r4       0,5
+IL_00B86: mul          
+IL_00B87: add          
+IL_00B88: ldc.i4.6     
+IL_00B89: ldarg.0      
+IL_00B8A: ldfld        System.Int32 Terraria.Entity::direction
+IL_00B8F: mul          
+IL_00B90: conv.r4      
+IL_00B91: add          
+IL_00B92: stfld        System.Single Microsoft.Xna.Framework.Vector2::X
+IL_00B97: ldarg.0      
+IL_00B98: ldflda       Microsoft.Xna.Framework.Vector2 Terraria.Player::itemLocation
+IL_00B9D: ldarg.0      
+IL_00B9E: ldflda       Microsoft.Xna.Framework.Vector2 Terraria.Entity::position
+IL_00BA3: ldfld        System.Single Microsoft.Xna.Framework.Vector2::Y
+IL_00BA8: ldc.r4       16
+IL_00BAD: add          
+IL_00BAE: ldarg.1      
+IL_00BAF: add          
+IL_00BB0: stfld        System.Single Microsoft.Xna.Framework.Vector2::Y
+IL_00BB5: ldarg.0      
+IL_00BB6: ldc.r4       0,79
+IL_00BBB: ldarg.0      
+IL_00BBC: ldfld        System.Int32 Terraria.Entity::direction
+IL_00BC1: neg          
+IL_00BC2: conv.r4      
+IL_00BC3: mul          
+IL_00BC4: stfld        System.Single Terraria.Player::itemRotation
+IL_00BC9: ldarg.0      
+IL_00BCA: ldfld        System.Single Terraria.Player::gravDir
+IL_00BCF: ldc.r4       -1
+IL_00BD4: bne.un       IL_00F24
+IL_00BD9: ldarg.0      
+IL_00BDA: ldc.r4       0
+IL_00BDF: ldarg.0      
+IL_00BE0: ldfld        System.Single Terraria.Player::itemRotation
+IL_00BE5: sub          
+IL_00BE6: stfld        System.Single Terraria.Player::itemRotation
+IL_00BEB: ldarg.0      
+IL_00BEC: ldflda       Microsoft.Xna.Framework.Vector2 Terraria.Player::itemLocation
+IL_00BF1: ldarg.0      
+IL_00BF2: ldflda       Microsoft.Xna.Framework.Vector2 Terraria.Entity::position
+IL_00BF7: ldfld        System.Single Microsoft.Xna.Framework.Vector2::Y
+IL_00BFC: ldarg.0      
+IL_00BFD: ldfld        System.Int32 Terraria.Entity::height
+IL_00C02: conv.r4      
+IL_00C03: add          
+IL_00C04: ldarg.0      
+IL_00C05: ldflda       Microsoft.Xna.Framework.Vector2 Terraria.Entity::position
+IL_00C0A: ldfld        System.Single Microsoft.Xna.Framework.Vector2::Y
+IL_00C0F: ldarg.0      
+IL_00C10: ldflda       Microsoft.Xna.Framework.Vector2 Terraria.Player::itemLocation
+IL_00C15: ldfld        System.Single Microsoft.Xna.Framework.Vector2::Y
+IL_00C1A: sub          
+IL_00C1B: add          
+IL_00C1C: stfld        System.Single Microsoft.Xna.Framework.Vector2::Y
+IL_00C21: ret          
+IL_00C22: ldarg.2      
+IL_00C23: ldfld        System.Int32 Terraria.Item::holdStyle
+IL_00C28: ldc.i4.3     
+IL_00C29: bne.un.s     IL_00C9B
+IL_00C2B: ldarg.0      
+IL_00C2C: ldfld        System.Boolean Terraria.Player::pulley
+IL_00C31: brtrue.s     IL_00C9B
+IL_00C33: ldsfld       System.Boolean Terraria.Main::dedServ
+IL_00C38: brtrue       IL_00F24
+IL_00C3D: ldarg.0      
+IL_00C3E: ldflda       Microsoft.Xna.Framework.Vector2 Terraria.Player::itemLocation
+IL_00C43: ldarg.0      
+IL_00C44: ldflda       Microsoft.Xna.Framework.Vector2 Terraria.Entity::position
+IL_00C49: ldfld        System.Single Microsoft.Xna.Framework.Vector2::X
+IL_00C4E: ldarg.0      
+IL_00C4F: ldfld        System.Int32 Terraria.Entity::width
+IL_00C54: conv.r4      
+IL_00C55: ldc.r4       0,5
+IL_00C5A: mul          
+IL_00C5B: add          
+IL_00C5C: ldarg.0      
+IL_00C5D: ldfld        System.Int32 Terraria.Entity::direction
+IL_00C62: ldc.i4.2     
+IL_00C63: mul          
+IL_00C64: conv.r4      
+IL_00C65: sub          
+IL_00C66: stfld        System.Single Microsoft.Xna.Framework.Vector2::X
+IL_00C6B: ldarg.0      
+IL_00C6C: ldflda       Microsoft.Xna.Framework.Vector2 Terraria.Player::itemLocation
+IL_00C71: ldarg.0      
+IL_00C72: call         Microsoft.Xna.Framework.Vector2 Terraria.Player::get_MountedCenter()
+IL_00C77: ldfld        System.Single Microsoft.Xna.Framework.Vector2::Y
+IL_00C7C: ldarg.3      
+IL_00C7D: ldfld        System.Int32 Microsoft.Xna.Framework.Rectangle::Height
+IL_00C82: conv.r4      
+IL_00C83: ldc.r4       0,5
+IL_00C88: mul          
+IL_00C89: sub          
+IL_00C8A: stfld        System.Single Microsoft.Xna.Framework.Vector2::Y
+IL_00C8F: ldarg.0      
+IL_00C90: ldc.r4       0
+IL_00C95: stfld        System.Single Terraria.Player::itemRotation
+IL_00C9A: ret          
+IL_00C9B: ldarg.2      
+IL_00C9C: ldfld        System.Int32 Terraria.Item::holdStyle
+IL_00CA1: ldc.i4.4     
+IL_00CA2: bne.un       IL_00D98
+IL_00CA7: ldsfld       System.Boolean Terraria.Main::dedServ
+IL_00CAC: brtrue       IL_00F24
+IL_00CB1: ldc.i4.s     10
+IL_00CB3: ldarg.0      
+IL_00CB4: ldfld        System.Int32 Terraria.Entity::direction
+IL_00CB9: mul          
+IL_00CBA: conv.r4      
+IL_00CBB: ldc.r4       10
+IL_00CC0: newobj       System.Void Microsoft.Xna.Framework.Vector2::.ctor(System.Single,System.Single)
+IL_00CC5: call         System.Single Terraria.Utils::ToRotation(Microsoft.Xna.Framework.Vector2)
+IL_00CCA: ldc.r4       0,7853982
+IL_00CCF: add          
+IL_00CD0: stloc.s      V_13
+IL_00CD2: ldarg.0      
+IL_00CD3: ldloc.s      V_13
+IL_00CD5: stfld        System.Single Terraria.Player::itemRotation
+IL_00CDA: ldarg.0      
+IL_00CDB: ldfld        System.Int32 Terraria.Entity::direction
+IL_00CE0: ldc.i4.m1    
+IL_00CE1: bne.un.s     IL_00CF5
+IL_00CE3: ldarg.0      
+IL_00CE4: ldarg.0      
+IL_00CE5: ldfld        System.Single Terraria.Player::itemRotation
+IL_00CEA: ldc.r4       1,5707964
+IL_00CEF: add          
+IL_00CF0: stfld        System.Single Terraria.Player::itemRotation
+IL_00CF5: ldc.i4.0     
+IL_00CF6: stloc.s      V_14
+IL_00CF8: ldc.i4.3     
+IL_00CF9: stloc.s      V_15
+IL_00CFB: ldc.r4       -0,31415927
+IL_00D00: stloc.s      V_16
+IL_00D02: ldarg.0      
+IL_00D03: ldfld        System.Int32 Terraria.Entity::direction
+IL_00D08: ldc.i4.m1    
+IL_00D09: bne.un.s     IL_00D15
+IL_00D0B: ldloc.s      V_16
+IL_00D0D: ldc.r4       -1
+IL_00D12: mul          
+IL_00D13: stloc.s      V_16
+IL_00D15: ldarg.0      
+IL_00D16: ldfld        System.Single Terraria.Player::itemRotation
+IL_00D1B: ldc.r4       0,7853982
+IL_00D20: sub          
+IL_00D21: ldc.r4       3,1415927
+IL_00D26: add          
+IL_00D27: stloc.s      V_17
+IL_00D29: ldarg.0      
+IL_00D2A: ldfld        System.Int32 Terraria.Entity::direction
+IL_00D2F: ldc.i4.1     
+IL_00D30: bne.un.s     IL_00D3C
+IL_00D32: ldloc.s      V_17
+IL_00D34: ldc.r4       1,5707964
+IL_00D39: add          
+IL_00D3A: stloc.s      V_17
+IL_00D3C: ldloc.s      V_17
+IL_00D3E: ldloc.s      V_16
+IL_00D40: add          
+IL_00D41: stloc.s      V_18
+IL_00D43: ldloc.s      V_17
+IL_00D45: ldloc.s      V_16
+IL_00D47: sub          
+IL_00D48: stloc.s      V_19
+IL_00D4A: ldloc.s      V_17
+IL_00D4C: ldc.r4       1,5707964
+IL_00D51: add          
+IL_00D52: call         Microsoft.Xna.Framework.Vector2 Terraria.Utils::ToRotationVector2(System.Single)
+IL_00D57: ldc.r4       2
+IL_00D5C: call         Microsoft.Xna.Framework.Vector2 Microsoft.Xna.Framework.Vector2::op_Multiply(Microsoft.Xna.Framework.Vector2,System.Single)
+IL_00D61: stloc.s      V_20
+IL_00D63: ldarg.0      
+IL_00D64: ldarg.0      
+IL_00D65: call         Microsoft.Xna.Framework.Vector2 Terraria.Player::get_MountedCenter()
+IL_00D6A: call         Microsoft.Xna.Framework.Vector2 Terraria.Utils::Floor(Microsoft.Xna.Framework.Vector2)
+IL_00D6F: ldloc.s      V_20
+IL_00D71: call         Microsoft.Xna.Framework.Vector2 Microsoft.Xna.Framework.Vector2::op_Addition(Microsoft.Xna.Framework.Vector2,Microsoft.Xna.Framework.Vector2)
+IL_00D76: stfld        Microsoft.Xna.Framework.Vector2 Terraria.Player::itemLocation
+IL_00D7B: ldarg.0      
+IL_00D7C: ldc.i4.1     
+IL_00D7D: ldloc.s      V_14
+IL_00D7F: ldloc.s      V_18
+IL_00D81: call         System.Void Terraria.Player::SetCompositeArmFront(System.Boolean,Terraria.Player/CompositeArmStretchAmount,System.Single)
+IL_00D86: ldarg.0      
+IL_00D87: ldc.i4.1     
+IL_00D88: ldloc.s      V_15
+IL_00D8A: ldloc.s      V_19
+IL_00D8C: call         System.Void Terraria.Player::SetCompositeArmBack(System.Boolean,Terraria.Player/CompositeArmStretchAmount,System.Single)
+IL_00D91: ldarg.0      
+IL_00D92: call         System.Void Terraria.Player::FlipItemLocationAndRotationForGravity()
+IL_00D97: ret          
+IL_00D98: ldarg.2      
+IL_00D99: ldfld        System.Int32 Terraria.Item::holdStyle
+IL_00D9E: ldc.i4.5     
+IL_00D9F: bne.un       IL_00E68
+IL_00DA4: ldarg.0      
+IL_00DA5: ldfld        System.Boolean Terraria.Player::pulley
+IL_00DAA: brtrue       IL_00E68
+IL_00DAF: ldsfld       System.Boolean Terraria.Main::dedServ
+IL_00DB4: brtrue       IL_00F24
+IL_00DB9: ldarg.0      
+IL_00DBA: ldc.r4       0
+IL_00DBF: stfld        System.Single Terraria.Player::itemRotation
+IL_00DC4: ldarg.0      
+IL_00DC5: ldflda       Microsoft.Xna.Framework.Vector2 Terraria.Player::itemLocation
+IL_00DCA: ldarg.0      
+IL_00DCB: call         Microsoft.Xna.Framework.Vector2 Terraria.Entity::get_Center()
+IL_00DD0: ldfld        System.Single Microsoft.Xna.Framework.Vector2::X
+IL_00DD5: ldc.i4.8     
+IL_00DD6: ldarg.0      
+IL_00DD7: ldfld        System.Int32 Terraria.Entity::direction
+IL_00DDC: mul          
+IL_00DDD: conv.r4      
+IL_00DDE: sub          
+IL_00DDF: stfld        System.Single Microsoft.Xna.Framework.Vector2::X
+IL_00DE4: ldarg.0      
+IL_00DE5: ldflda       Microsoft.Xna.Framework.Vector2 Terraria.Player::itemLocation
+IL_00DEA: ldarg.0      
+IL_00DEB: ldflda       Microsoft.Xna.Framework.Vector2 Terraria.Entity::position
+IL_00DF0: ldfld        System.Single Microsoft.Xna.Framework.Vector2::Y
+IL_00DF5: ldc.r4       40
+IL_00DFA: add          
+IL_00DFB: ldarg.1      
+IL_00DFC: add          
+IL_00DFD: stfld        System.Single Microsoft.Xna.Framework.Vector2::Y
+IL_00E02: ldsfld       Microsoft.Xna.Framework.Vector2[] Terraria.Main::OffsetsPlayerHeadgear
+IL_00E07: ldarg.0      
+IL_00E08: ldflda       Microsoft.Xna.Framework.Rectangle Terraria.Player::bodyFrame
+IL_00E0D: ldfld        System.Int32 Microsoft.Xna.Framework.Rectangle::Y
+IL_00E12: ldc.i4.s     56
+IL_00E14: div          
+IL_00E15: ldelem.any   Microsoft.Xna.Framework.Vector2
+IL_00E1A: stloc.s      V_21
+IL_00E1C: ldarg.0      
+IL_00E1D: ldarg.0      
+IL_00E1E: ldfld        Microsoft.Xna.Framework.Vector2 Terraria.Player::itemLocation
+IL_00E23: ldloc.s      V_21
+IL_00E25: call         Microsoft.Xna.Framework.Vector2 Microsoft.Xna.Framework.Vector2::op_Addition(Microsoft.Xna.Framework.Vector2,Microsoft.Xna.Framework.Vector2)
+IL_00E2A: stfld        Microsoft.Xna.Framework.Vector2 Terraria.Player::itemLocation
+IL_00E2F: ldc.i4.2     
+IL_00E30: stloc.s      V_22
+IL_00E32: ldarg.0      
+IL_00E33: ldc.i4.1     
+IL_00E34: ldloc.s      V_22
+IL_00E36: ldc.r4       -0,7853982
+IL_00E3B: ldarg.0      
+IL_00E3C: ldfld        System.Int32 Terraria.Entity::direction
+IL_00E41: conv.r4      
+IL_00E42: mul          
+IL_00E43: call         System.Void Terraria.Player::SetCompositeArmBack(System.Boolean,Terraria.Player/CompositeArmStretchAmount,System.Single)
+IL_00E48: ldc.i4.0     
+IL_00E49: stloc.s      V_23
+IL_00E4B: ldarg.0      
+IL_00E4C: ldc.i4.1     
+IL_00E4D: ldloc.s      V_23
+IL_00E4F: ldc.r4       -0,39269912
+IL_00E54: ldarg.0      
+IL_00E55: ldfld        System.Int32 Terraria.Entity::direction
+IL_00E5A: conv.r4      
+IL_00E5B: mul          
+IL_00E5C: call         System.Void Terraria.Player::SetCompositeArmFront(System.Boolean,Terraria.Player/CompositeArmStretchAmount,System.Single)
+IL_00E61: ldarg.0      
+IL_00E62: call         System.Void Terraria.Player::FlipItemLocationAndRotationForGravity()
+IL_00E67: ret          
+IL_00E68: ldarg.2      
+IL_00E69: ldfld        System.Int32 Terraria.Item::holdStyle
+IL_00E6E: ldc.i4.6     
+IL_00E6F: bne.un       IL_00F24
+IL_00E74: ldarg.0      
+IL_00E75: ldfld        System.Boolean Terraria.Player::pulley
+IL_00E7A: brtrue       IL_00F24
+IL_00E7F: ldsfld       System.Boolean Terraria.Main::dedServ
+IL_00E84: brtrue       IL_00F24
+IL_00E89: ldarg.0      
+IL_00E8A: ldc.r4       0
+IL_00E8F: stfld        System.Single Terraria.Player::itemRotation
+IL_00E94: ldarg.0      
+IL_00E95: ldflda       Microsoft.Xna.Framework.Vector2 Terraria.Player::itemLocation
+IL_00E9A: ldarg.0      
+IL_00E9B: call         Microsoft.Xna.Framework.Vector2 Terraria.Entity::get_Center()
+IL_00EA0: ldfld        System.Single Microsoft.Xna.Framework.Vector2::X
+IL_00EA5: ldc.i4.8     
+IL_00EA6: ldarg.0      
+IL_00EA7: ldfld        System.Int32 Terraria.Entity::direction
+IL_00EAC: mul          
+IL_00EAD: conv.r4      
+IL_00EAE: add          
+IL_00EAF: stfld        System.Single Microsoft.Xna.Framework.Vector2::X
+IL_00EB4: ldarg.0      
+IL_00EB5: ldflda       Microsoft.Xna.Framework.Vector2 Terraria.Player::itemLocation
+IL_00EBA: ldarg.0      
+IL_00EBB: ldflda       Microsoft.Xna.Framework.Vector2 Terraria.Entity::position
+IL_00EC0: ldfld        System.Single Microsoft.Xna.Framework.Vector2::Y
+IL_00EC5: ldc.r4       40
+IL_00ECA: add          
+IL_00ECB: ldarg.1      
+IL_00ECC: add          
+IL_00ECD: ldc.r4       2
+IL_00ED2: sub          
+IL_00ED3: stfld        System.Single Microsoft.Xna.Framework.Vector2::Y
+IL_00ED8: ldsfld       Microsoft.Xna.Framework.Vector2[] Terraria.Main::OffsetsPlayerHeadgear
+IL_00EDD: ldarg.0      
+IL_00EDE: ldflda       Microsoft.Xna.Framework.Rectangle Terraria.Player::bodyFrame
+IL_00EE3: ldfld        System.Int32 Microsoft.Xna.Framework.Rectangle::Y
+IL_00EE8: ldc.i4.s     56
+IL_00EEA: div          
+IL_00EEB: ldelem.any   Microsoft.Xna.Framework.Vector2
+IL_00EF0: stloc.s      V_24
+IL_00EF2: ldarg.0      
+IL_00EF3: ldarg.0      
+IL_00EF4: ldfld        Microsoft.Xna.Framework.Vector2 Terraria.Player::itemLocation
+IL_00EF9: ldloc.s      V_24
+IL_00EFB: call         Microsoft.Xna.Framework.Vector2 Microsoft.Xna.Framework.Vector2::op_Addition(Microsoft.Xna.Framework.Vector2,Microsoft.Xna.Framework.Vector2)
+IL_00F00: stfld        Microsoft.Xna.Framework.Vector2 Terraria.Player::itemLocation
+IL_00F05: ldc.i4.3     
+IL_00F06: stloc.s      V_25
+IL_00F08: ldarg.0      
+IL_00F09: ldc.i4.1     
+IL_00F0A: ldloc.s      V_25
+IL_00F0C: ldc.r4       -1,8849556
+IL_00F11: ldarg.0      
+IL_00F12: ldfld        System.Int32 Terraria.Entity::direction
+IL_00F17: conv.r4      
+IL_00F18: mul          
+IL_00F19: call         System.Void Terraria.Player::SetCompositeArmBack(System.Boolean,Terraria.Player/CompositeArmStretchAmount,System.Single)
+IL_00F1E: ldarg.0      
+IL_00F1F: call         System.Void Terraria.Player::FlipItemLocationAndRotationForGravity()
+IL_00F24: ret          
